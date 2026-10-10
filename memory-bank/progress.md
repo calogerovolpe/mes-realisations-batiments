@@ -39,6 +39,11 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       en PDF (nom de l'architecte et autres noms de personnes interdits) — voir
       activeContext.md.
 
+- [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
+      parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore
+      l'ancienne adresse (texte vectoriel en police sous-ensemble) — le régénérer depuis
+      la source et remplacer assets/fichiers/cv-volpe-calogero.pdf.
+
 ## Rappel de fin de jalon
 git add . → git commit → git push origin main → git status propre → page vérifiée en
 ligne → memory-bank mis à jour et poussé → recherche des noms interdits.

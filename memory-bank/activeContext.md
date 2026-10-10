@@ -65,7 +65,7 @@ Complément (10 octobre 2026) — chiffrage, barre mobile, pages cibles, téléc
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
 - L'architecte du stage n'est jamais nommé : écrire « architecte indépendant ».
-- Un seul e-mail : bx.volpe@gmail.com. Aucun numéro de téléphone, aucune adresse.
+- Un seul e-mail : contact@calogero-volpe.eu. Aucun numéro de téléphone, aucune adresse.
 - « Guignies, zone frontalière Lille » (pas de code postal).
 - Montreuil : décrit en texte ; seuls PH·01 et PH·02 (relevés diffusés avec autorisation) sont publiés, aucun autre visuel.
 
@@ -77,3 +77,7 @@ Points ouverts
 - Rapport de stage : le PDF ne peut pas être publié en l'état (nom de l'architecte,
   autres noms de personnes, nom de rue dans la couverture). Fournir une version
   anonymisée si le téléchargement est souhaité.
+- CV PDF publié (assets/fichiers/cv-volpe-calogero.pdf) : l'ancienne adresse
+  bx.volpe@gmail.com subsiste dans le texte visible (police sous-ensemble, texte
+  vectoriel) — non modifiable par substitution. À régénérer depuis la source
+  (export Canva) avec contact@calogero-volpe.eu, puis remplacer le fichier.
