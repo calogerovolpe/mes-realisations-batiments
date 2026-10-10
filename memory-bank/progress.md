@@ -30,6 +30,15 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       présentations REL·01-04 masqués ; attestation AFPA remise en portrait. Règle 02 mise
       à jour (exception PH·01/PH·02).
 
+- [x] Complément (10 octobre 2026) : libellé de navigation « Excel » → « Chiffrage »
+      (10 pages) ; barre de navigation inférieure à icônes sur smartphone (Accueil au
+      centre, titre de marque et recherche masqués, Ctrl+K désactivé) ; barre d'impression
+      limitée à parcours.html ; nouvelles pages « Ce que je cherche » et « Étude de cas —
+      rapport de stage » (extraits de dessins) ; CV publié au téléchargement après
+      expurgation (code postal et téléphone retirés). Le rapport de stage n'est pas publié
+      en PDF (nom de l'architecte et autres noms de personnes interdits) — voir
+      activeContext.md.
+
 ## Rappel de fin de jalon
 git add . → git commit → git push origin main → git status propre → page vérifiée en
 ligne → memory-bank mis à jour et poussé → recherche des noms interdits.

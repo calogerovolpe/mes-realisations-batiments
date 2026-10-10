@@ -7,10 +7,12 @@
   var DONNEES =
     'Accueil|index.html|Accueil|Portfolio de dessin technique CAO/DAO;' +
     'Portfolio CAO / DAO|portfolio.html|Portfolio|Plans et réalisations sous AutoCAD;' +
-    'Modèles Excel — chiffrage et quantification|excel.html|Excel|Sommaire des modèles et des fonctions;' +
-    'Chiffrage d\'exploitation et rentabilité|excel-modele-01-rentabilite.html|Excel|Coûts, quantités, marges, prévisionnel;' +
-    'Quantification des composants et coût matière|excel-modele-02-cout-matiere.html|Excel|Nomenclature, prix unitaires et coûts;' +
-    'Estimation d\'investissement et financement|excel-modele-03-investissement.html|Excel|Investissement, financement et BFR;' +
+    'Rapport de stage — étude de cas|etude-cas-rapport-stage.html|Portfolio|Méthode de dessin assisté, du relevé à la sortie graphique;' +
+    'Ce que je cherche|ce-que-je-cherche.html|Ce que je cherche|Poste visé, environnement et mobilité;' +
+    'Chiffrage et quantification|excel.html|Chiffrage|Sommaire des modèles et des fonctions;' +
+    'Chiffrage d\'exploitation et rentabilité|excel-modele-01-rentabilite.html|Chiffrage|Coûts, quantités, marges, prévisionnel;' +
+    'Quantification des composants et coût matière|excel-modele-02-cout-matiere.html|Chiffrage|Nomenclature, prix unitaires et coûts;' +
+    'Estimation d\'investissement et financement|excel-modele-03-investissement.html|Chiffrage|Investissement, financement et BFR;' +
     'Parcours et compétences|parcours.html|Parcours|Compétences, formation, expérience;' +
     'Contact|contact.html|Contact|Formulaire de contact et e-mail;' +
     'Mentions légales|mentions-legales.html|Mentions légales|Éditeur et confidentialité;' +
@@ -63,12 +65,17 @@
       else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
     });
     document.addEventListener('keydown', function (e) {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); basculer(); }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        // Sur smartphone (barre inférieure à icônes), aucun raccourci de recherche.
+        if (window.matchMedia && window.matchMedia('(max-width: 60rem)').matches) { return; }
+        e.preventDefault(); basculer();
+      }
       else if (e.key === 'Escape' && !boite.hidden) { fermer(); }
     });
     var nav = document.querySelector('.site-nav ul');
     if (nav) {
       var li = document.createElement('li');
+      li.className = 'nav-recherche';
       li.innerHTML = '<button type="button" class="rg-btn" aria-label="Rechercher dans le site (Ctrl+K)">Rechercher <kbd class="rg-kbd">Ctrl K</kbd></button>';
       li.querySelector('button').addEventListener('click', ouvrir);
       nav.appendChild(li);

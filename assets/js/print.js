@@ -2,12 +2,15 @@
    Amélioration progressive : les boutons sont ajoutés par JavaScript, donc
    aucun contrôle inopérant lorsque JavaScript est désactivé. Les deux boutons
    ouvrent la boîte de dialogue d'impression (window.print()), depuis laquelle
-   le navigateur permet aussi d'enregistrer au format PDF. */
+   le navigateur permet aussi d'enregistrer au format PDF.
+   La barre n'est ajoutée que sur les pages expressément imprimables : seul le
+   <main> portant l'attribut data-impression la reçoit (aujourd'hui la page
+   parcours, conçue pour s'imprimer comme un CV). */
 (function () {
   'use strict';
 
   function construireBarre() {
-    var main = document.querySelector('main');
+    var main = document.querySelector('main[data-impression]');
     if (!main) { return; }
 
     var barre = document.createElement('div');

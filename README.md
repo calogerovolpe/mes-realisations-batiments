@@ -14,7 +14,8 @@ aucun build, aucune dépendance externe, aucune police téléchargée.
 - Pages HTML à plat à la racine
 - `assets/css/style.css` — feuille de style unique (thème « plan technique »)
 - `assets/css/print.css` — feuille d'impression
-- `assets/img/` — planches du portfolio et captures
+- `assets/img/` — planches du portfolio, captures et extraits
+- `assets/fichiers/` — CV au format PDF (seul document téléchargeable)
 - `assets/js/` — point d'entrée `main.js` (defer) + modules
 - `memory-bank/` — état d'avancement du projet
 

@@ -36,6 +36,32 @@ URL : https://calogerovolpe.github.io/mes-realisations-batiments/
   quantification » (chiffrage d'exploitation, quantification des composants,
   estimation d'investissement) ; liens morts des fiches corrigés vers le portfolio.
 
+Complément (10 octobre 2026) — chiffrage, barre mobile, pages cibles, téléchargement
+- Navigation : libellé « Excel » remplacé par « Chiffrage » sur les 10 pages
+  (excel.html garde son nom de fichier) ; fil d'Ariane et carte 404 alignés ;
+  <title>, <h1> et métadonnées de excel.html recentrés sur « Chiffrage et
+  quantification ».
+- Responsive : sous 60 rem, la barre latérale devient une barre INFÉRIEURE fixe,
+  en icônes seules ; l'entrée Accueil occupe le centre (ordre CSS) ; le titre de
+  marque et le bouton « Rechercher » sont masqués ; aucun raccourci Ctrl+K sur
+  smartphone (garde dans global-search.js) ; bascule de thème en icône isolée à
+  droite ; « retour en haut » remonté au-dessus de la barre. Le h1 reste en tête
+  du contenu (sur l'accueil, la photo passe après le h1 et l'accroche).
+- Impression : la barre « Imprimer / Télécharger en PDF » n'est plus ajoutée que
+  sur le <main> portant data-impression — aujourd'hui parcours.html.
+- Nouvelles pages : ce-que-je-cherche.html (poste visé, environnements, méthode,
+  outils, disponibilité) et etude-cas-rapport-stage.html (Contexte, Méthode,
+  Résultat, Ce que cela démontre). Liens depuis l'accueil, le portfolio, le
+  parcours, le contact et la recherche globale. Ces deux pages ne figurent pas
+  dans la barre de navigation : celle-ci reste à 5 entrées pour garder Accueil
+  parfaitement au centre sur smartphone.
+- Téléchargement : un seul document publié, le CV, après expurgation
+  (assets/fichiers/cv-volpe-calogero.pdf) — code postal et numéro de
+  téléphone retirés. Le rapport de stage n'est PAS publié au téléchargement : il
+  contient le nom de l'architecte et d'autres noms de personnes (interdits) ainsi
+  qu'un nom de rue dans l'illustration de couverture. Trois extraits de dessins
+  sans donnée nominative sont publiés en images (assets/img/rapport-stage-*.png).
+
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
 - L'architecte du stage n'est jamais nommé : écrire « architecte indépendant ».
@@ -48,3 +74,6 @@ Points ouverts
   renseigner par le propriétaire (« VOTRE_ID »).
 - Captions des planches : exactes mais génériques ; affinables si souhaité.
 - JavaScript total ≈ 25,6 Ko (au-dessus de l'ancienne limite de 24 Ko, viewer.js inclus).
+- Rapport de stage : le PDF ne peut pas être publié en l'état (nom de l'architecte,
+  autres noms de personnes, nom de rue dans la couverture). Fournir une version
+  anonymisée si le téléchargement est souhaité.
