@@ -22,6 +22,14 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       à l'AFPA pour devenir dessinateur projeteur) ; section « Diplômes et certifications »
       avec diplôme Bac pro et attestation de compétence AFPA affichés en pop-up.
 
+- [x] Complément portfolio & accueil (hors jalon) : photo (photo-profil.jpg) ajoutée à
+      l'accueil et au parcours ; texte « Profil » du CV et bouton vers le parcours sur
+      l'accueil ; légendes A10-A12 (entreprise externe) et PH·01-PH·02 (Montreuil, diffusés
+      avec autorisation) ; nouveau groupe « Modélisation 3D — SketchUp » (SKP·01-07 :
+      habitation, L'Appartement lié au modèle Excel 03, restaurant 180 m²) ; cartouches des
+      présentations REL·01-04 masqués ; attestation AFPA remise en portrait. Règle 02 mise
+      à jour (exception PH·01/PH·02).
+
 ## Rappel de fin de jalon
 git add . → git commit → git push origin main → git status propre → page vérifiée en
 ligne → memory-bank mis à jour et poussé → recherche des noms interdits.
