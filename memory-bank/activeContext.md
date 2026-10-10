@@ -4,26 +4,30 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : Jalon 1 (fondations + identité CAO/DAO + accueil + portfolio) réalisé.
-- Thème « plan technique » : calque bleu nuit, grille millimétrée, tracés cyan, cotation
-  ambrée, annotations en chasse fixe ; thème clair « calque papier » (bouton de thème).
-- Navigation : Accueil · Portfolio · Excel · Parcours · Contact. Sections Business plans
-  et Identité visuelle supprimées (pages et images).
-- Portfolio : 24 planches (20 captures AutoCAD + 4 relevés), importées depuis /docs/BAT,
-  renommées (autocad-01..20.jpg, releve-01..04.jpg), compressées < 300 Ko. Présentées
-  comme issues d'un stage de deux mois chez un architecte indépendant (post-AFPA). Les
-  documents liés à la collectivité territoriale (Montreuil) sont confidentiels : aucune
-  image, aucune donnée publiée.
-- Pages conservées : excel.html, excel-modele-01/02/03-*.html, parcours.html,
-  contact.html, mentions-legales.html, 404.html (navigation, titres, pied de page et URL
-  mis à jour ; contenus Excel et parcours à retravailler aux jalons 2 et 3).
+État : Jalon 2 (portfolio précisé + visionneuse + parcours) réalisé.
+- Portfolio : 26 planches en 6 groupes — captures d'écran AutoCAD (A01-A09), relevé
+  d'existant (A10-A12 + 2 photos), organisation du projet (A13), plan projet coté
+  (A14-A17 et A20), projet de cabanon (A18-A19), présentations cartouche et échelle
+  (REL·01-04). Chaque planche ouvre un aperçu agrandi (.visionneuse, CSS :target) ;
+  le module viewer.js ajoute la navigation à la molette et au clavier, et les boutons
+  précédent / suivant. Images : autocad-01..20.jpg, releve-01..04.jpg,
+  releve-photo-01..02.jpg (< 300 Ko).
+- Parcours : réécrit depuis le CV /docs/BAT — profil dessinateur projeteur CAO/DAO,
+  compétences techniques (.spec), frise (chrono) formations + expériences, fenêtres de
+  détail, langues, centres d'intérêt, renvoi au portfolio. Le stage de deux mois chez un
+  architecte indépendant est rattaché à la formation AFPA (fin de formation).
+- Thème « plan technique » et navigation (Accueil · Portfolio · Excel · Parcours ·
+  Contact) du Jalon 1 conservés ; sections Business plans et Identité visuelle supprimées.
+- Reste à retravailler au Jalon 3 : excel.html et les trois modèles (chiffrage /
+  quantification), puis contact, mentions légales, 404, SEO.
 
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
+- L'architecte du stage n'est jamais nommé : écrire « architecte indépendant ».
 - Un seul e-mail : bx.volpe@gmail.com. Aucun numéro de téléphone, aucune adresse.
 - « Guignies, zone frontalière Lille » (pas de code postal).
-- Aucune police externe, aucun script tiers.
+- Montreuil : décrit en texte, jamais d'image.
 
-À faire (jalon 2)
-- parcours.html : réécrire depuis le CV /docs/BAT (profil dessinateur projeteur CAO/DAO).
-- excel.html + modèles : recentrer sur chiffrage / quantification / suivi budgétaire.
+À faire (jalon 3)
+- excel.html + 3 modèles : recentrer sur chiffrage / quantification / suivi budgétaire.
+- contact.html, mentions-legales.html, 404.html, SEO et contrôle final des noms interdits.

@@ -12,6 +12,7 @@
     'assets/js/nav.js',
     'assets/js/search.js',
     'assets/js/sommaire.js',
+    'assets/js/viewer.js',
     'assets/js/global-search.js'
   ];
 

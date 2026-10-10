@@ -8,9 +8,12 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       Business plans et Identité visuelle (pages et images) ; nouvelle page d'accueil ;
       portfolio `portfolio.html` (24 planches AutoCAD importées et compressées < 300 Ko) ;
       README, memory-bank et règles mis à jour.
-- [ ] Jalon 2 — Parcours (CV dessinateur projeteur, base du CV /docs/BAT) et Excel
-      recentré « chiffrage / quantification » (profil deviseur).
-- [ ] Jalon 3 — Finitions : contact, mentions légales, 404, SEO, contrôle final.
+- [x] Jalon 2 — Portfolio précisé (6 groupes, 26 planches aux légendes exactes,
+      visionneuse au clic avec navigation à la molette et au clavier) et Parcours
+      réécrit depuis le CV /docs/BAT (profil dessinateur projeteur CAO/DAO ; stage
+      de fin de formation chez un architecte indépendant).
+- [ ] Jalon 3 — Excel recentré « chiffrage / quantification » (profil deviseur) et
+      finitions : contact, mentions légales, 404, SEO, contrôle final.
 
 ## Rappel de fin de jalon
 git add . → git commit → git push origin main → git status propre → page vérifiée en
