@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Appartement — investissement, financement et BFR — Volpe Calogero — Dessinateur projeteur CAO/DAO</title>
+<meta name="description" content="Exercice de modélisation : plan d'investissement, plan de financement et besoin en fonds de roulement d'un café-restaurant multi-moments, avec prévisionnel d'exploitation et tableaux croisés dynamiques.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Volpe Calogero — Dessinateur projeteur CAO/DAO">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="L'Appartement — investissement, financement et BFR — Volpe Calogero — Dessinateur projeteur CAO/DAO">
+    <meta property="og:description" content="Exercice de modélisation : plan d'investissement, plan de financement et besoin en fonds de roulement d'un café-restaurant multi-moments, avec prévisionnel d'exploitation et tableaux croisés dynamiques.">
+    <meta property="og:url" content="https://calogerovolpe.github.io/mes-realisations-batiments/excel-modele-03-investissement.html">
+<script>try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t)}}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+<input type="checkbox" id="nav-reduit" class="nav-reduit" aria-label="Réduire ou déployer le menu">
+<aside class="site-sidebar">
+  <div class="sidebar-tete">
+    <a class="site-title" href="index.html" aria-label="Volpe Calogero — Dessinateur projeteur CAO/DAO"><span class="marque-nom">Volpe Calogero — Dessinateur projeteur CAO/DAO</span><span class="marque-sigle" aria-hidden="true">VC</span></a>
+    <label for="nav-reduit" class="sidebar-bascule"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"/></svg><span class="visually-hidden">Réduire ou déployer le menu</span></label>
+  </div>
+  <nav class="site-nav" aria-label="Navigation principale">
+    <ul>
+        <li><a href="index.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg><span class="nav-libelle">Accueil</span></a></li>
+        <li><a href="portfolio.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="14" rx="1"/><path d="M4 12h7"/><path d="M11 5v14"/><path d="M16 12v7"/></svg><span class="nav-libelle">Portfolio</span></a></li>
+        <li><a href="excel.html" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4z"/><path d="M4 9.5h16"/><path d="M4 14.5h16"/><path d="M10 5v14"/></svg><span class="nav-libelle">Excel</span></a></li>
+        <li><a href="parcours.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg><span class="nav-libelle">Parcours</span></a></li>
+        <li><a href="contact.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span class="nav-libelle">Contact</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<main class="site-main" id="contenu">
+  <p class="fil-ariane"><a href="excel.html">Excel</a> — Modèle 03</p>
+  <h1>L'Appartement — investissement, financement et besoin en fonds de roulement</h1>
+  <p>Exercice de modélisation financière : bâtir le plan d'investissement et de financement d'un café-restaurant multi-moments, calculer le besoin en fonds de roulement et vérifier l'équilibre prévisionnel de l'exploitation. <em>L'Appartement est un nom de marque inventé.</em></p>
+
+  <nav class="dossier" aria-label="Réalisations liées">
+    <span class="dossier-label">Dossier lié</span>
+    <a class="dossier-link" href="bp-etude-02-cafe-restaurant.html">Étude de marché — café-restaurant multi-moments (L'Appartement)</a>
+  </nav>
+
+  <h2>Contexte</h2>
+  <p>Un dossier d'ouverture se joue sur deux équations : ce qu'il faut investir au départ et ce que l'exploitation dégagera ensuite. L'objectif était de relier, dans un même classeur, les hypothèses d'exploitation, le coût matière des produits, le plan de financement et le bilan prévisionnel, afin de mesurer l'équilibre entre recettes, dépenses et besoin de trésorerie.</p>
+
+  <h2>Méthode</h2>
+  <p>Le classeur regroupe plusieurs blocs reliés entre eux :</p>
+  <ul>
+    <li>paramètres d'exploitation : jours d'ouverture par mois et couverts par jour, répartis entre les trois moments de la journée ;</li>
+    <li>menu et base d'articles : chaque produit de la carte est relié à ses ingrédients et à leurs prix d'achat, eux-mêmes issus de catalogues fournisseurs réels (Rungis Market, Aventure Bio, Mozzalat, Compos-table) ;</li>
+    <li>grille de ventes : quantités par jour, semaine et mois, coefficient appliqué, prix de vente HT et TTC, et marge par produit ;</li>
+    <li>bilan prévisionnel : recettes, frais fixes, frais variables, impôt et résultat net ;</li>
+    <li>plan de financement : investissement matériel, immobilisations incorporelles et corporelles, besoin en fonds de roulement et ressources ;</li>
+    <li>personnel : masse salariale selon le statut de la société ;</li>
+    <li>analyse des données par deux tableaux croisés dynamiques.</li>
+  </ul>
+  <p>Le modèle est relié à un classeur externe de données, afin d'éviter de ressaisir les prix des articles.</p>
+
+  <h2>Architecture du classeur</h2>
+  <p>Dix feuilles reliées entre elles descendent du chiffre d'affaires prévisionnel au résultat net, en passant par le plan de financement. Le schéma ci-dessous résume la circulation des données.</p>
+  <div class="flux" role="group" aria-label="Schéma du flux de données entre les feuilles du classeur">
+    <p class="flux-stats">10 feuilles · environ 3 800 formules · chaînage du chiffre d'affaires au résultat net</p>
+    <div class="flux-chaine">
+      <div class="flux-niveau"><span class="flux-role">Hypothèses</span><span class="flux-feuille">Paramètres</span><span class="flux-feuille">Articles</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Exploitation</span><span class="flux-feuille">Menu</span><span class="flux-feuille">Ventes</span><span class="flux-feuille">Personnels</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Prévisionnel</span><span class="flux-feuille">Bilan prévisionnel</span><span class="flux-feuille">Financement initial</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Résultat</span><span class="flux-feuille">Synthèse</span></div>
+    </div>
+  </div>
+  <p>La feuille de synthèse ne contient que des renvois vers les feuilles de calcul : le chiffre d'affaires vient des ventes, les sorties et le bénéfice net du bilan prévisionnel. Une seule hypothèse de fréquentation suffit à recalculer tout le dossier.</p>
+
+  <h2>Résultat</h2>
+  <p>Les tableaux ci-dessous reprennent la synthèse prévisionnelle et les hypothèses de fréquentation issues du modèle (26 jours d'ouverture par mois).</p>
+  <div class="table-wrap">
+    <table class="table">
+      <caption>Synthèse prévisionnelle de l'exploitation</caption>
+      <thead>
+        <tr><th scope="col">Indicateur</th><th scope="col">Mensuel</th><th scope="col">Annuel</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Chiffre d'affaires</th><td>25 001,64 €</td><td>300 019,65 €</td></tr>
+        <tr><th scope="row">Sorties (dépenses totales)</th><td>19 243,19 €</td><td>230 918,31 €</td></tr>
+        <tr><th scope="row">Bénéfice net après impôt</th><td>4 318,83 €</td><td>51 826,01 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <caption>Répartition des couverts par moment</caption>
+      <thead>
+        <tr><th scope="col">Moment</th><th scope="col">Couverts par jour</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Matin</th><td>40</td></tr>
+        <tr><th scope="row">Midi</th><td>40</td></tr>
+        <tr><th scope="row">Soir</th><td>30</td></tr>
+        <tr><th scope="row">Total</th><td>110</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Captures du modèle</h2>
+  <div class="tabs">
+    <input type="radio" name="onglet-modele-03" id="t1" class="tab-radio" checked>
+    <input type="radio" name="onglet-modele-03" id="t2" class="tab-radio">
+    <input type="radio" name="onglet-modele-03" id="t3" class="tab-radio">
+    <div class="tab-nav">
+      <label for="t1">Chaînage entre feuilles</label>
+      <label for="t2">Feuille de ventes</label>
+      <label for="t3">Vues des feuilles</label>
+    </div>
+    <div class="tab-panels">
+      <section class="tab-panel tab-1">
+        <figure>
+          <img src="assets/img/excel-03-archi-synthese.png" alt="Feuille de synthèse avec les formules affichées : renvois vers les feuilles de ventes et de bilan prévisionnel.">
+          <figcaption>Feuille de synthèse, formules affichées : le chiffre d'affaires vient des ventes, le résultat du bilan prévisionnel.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/excel-03-archi-bilan.png" alt="Bilan prévisionnel avec les formules affichées : recettes et dépenses reliées aux feuilles de ventes et de personnel.">
+          <figcaption>Bilan prévisionnel, formules affichées : chaque ligne de recette ou de dépense renvoie à une autre feuille du classeur.</figcaption>
+        </figure>
+      </section>
+      <section class="tab-panel tab-2">
+        <figure>
+          <img src="assets/img/excel-03-archi-ventes.png" alt="Feuille de ventes avec les formules affichées : répartition par jour, semaine et mois selon les paramètres et le menu.">
+          <figcaption>Feuille de ventes, formules affichées : les quantités découlent des paramètres d'exploitation et du menu.</figcaption>
+        </figure>
+      </section>
+      <section class="tab-panel tab-3">
+        <figure>
+          <img src="assets/img/excel-03-horaire.png" alt="Feuille des horaires du modèle 03 : jours d'ouverture et plages horaires par moment de la journée.">
+          <figcaption>Paramètres d'exploitation : jours d'ouverture et répartition des couverts sur les trois moments de la journée.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/excel-03-feuille-ventes.png" alt="Feuille de ventes du modèle 03 : répartition des ventes par jour, semaine et mois.">
+          <figcaption>Feuille de ventes : quantités par période issues des paramètres d'exploitation et du menu.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/excel-03-commande.png" alt="Feuille de commandes du modèle 03 : synthèse des quantités commandées par période.">
+          <figcaption>Feuille de commandes : synthèse des quantités commandées par période.</figcaption>
+        </figure>
+      </section>
+    </div>
+  </div>
+
+  <h2 id="formules">Fonctions et formules utilisées</h2>
+  <p>Le classeur combine recherche, conditions, agrégation et lecture de données :</p>
+  <ul class="formules-liste">
+    <li id="f-recherchex"><code>RECHERCHEX</code> — récupération, pour chaque ingrédient, du marché d'achat, de l'unité et du prix dans la base d'articles.</li>
+    <li id="f-si"><code>SI</code> — application de conditions dans le calcul des ventes et des coefficients.</li>
+    <li id="f-somme"><code>SOMME</code> — agrégation des coûts matière, des quantités et des totaux d'exploitation.</li>
+    <li id="f-arrondi"><code>ARRONDI</code> — arrondi des prix et des coefficients d'exploitation.</li>
+    <li id="f-lien"><code>LIEN_HYPERTEXTE</code> — création de liens cliquables dans le classeur.</li>
+    <li id="tcd">Tableaux croisés dynamiques — 2 analyses croisées issues du modèle : nombre d'articles par catégorie, puis quantités et coûts par semaine et par mois. Ces vues s'appuient sur la base d'articles et de commandes, non publiée en capture afin de ne pas exposer les données fournisseurs.</li>
+  </ul>
+
+  <h2>Ce que cela démontre</h2>
+  <p>Construction d'un dossier d'investissement complet : plan d'investissement, besoin en fonds de roulement, financement et prévisionnel d'exploitation reliés entre eux. Lecture d'un dossier financier de bout en bout, du chiffre d'affaires prévisionnel au résultat net, et analyse des données par tableaux croisés dynamiques.</p>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p>Portfolio personnel — © 2026. Dessins techniques CAO/DAO réalisés à titre personnel et lors d'un stage auprès d'un architecte indépendant ; les documents liés à la collectivité territoriale restent confidentiels et ne sont pas publiés. Automatisations VBA assistées par IA, relues et corrigées. Dossier complet présentable en entretien sur demande.</p>
+    <p class="maj">Dernière mise à jour : 10 octobre 2026</p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+</body>
+</html>

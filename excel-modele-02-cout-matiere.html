@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Urpi — fiches techniques et coût matière — Volpe Calogero — Dessinateur projeteur CAO/DAO</title>
+<meta name="description" content="Exercice de modélisation : fiches techniques de recettes et calcul du coût matière par plat, reliés à une base d'ingrédients sourcée, avec listes dynamiques et automatisation par macros VBA.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Volpe Calogero — Dessinateur projeteur CAO/DAO">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Casa Urpi — fiches techniques et coût matière — Volpe Calogero — Dessinateur projeteur CAO/DAO">
+    <meta property="og:description" content="Exercice de modélisation : fiches techniques de recettes et calcul du coût matière par plat, reliés à une base d'ingrédients sourcée, avec listes dynamiques et automatisation par macros VBA.">
+    <meta property="og:url" content="https://calogerovolpe.github.io/mes-realisations-batiments/excel-modele-02-cout-matiere.html">
+<script>try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t)}}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+<input type="checkbox" id="nav-reduit" class="nav-reduit" aria-label="Réduire ou déployer le menu">
+<aside class="site-sidebar">
+  <div class="sidebar-tete">
+    <a class="site-title" href="index.html" aria-label="Volpe Calogero — Dessinateur projeteur CAO/DAO"><span class="marque-nom">Volpe Calogero — Dessinateur projeteur CAO/DAO</span><span class="marque-sigle" aria-hidden="true">VC</span></a>
+    <label for="nav-reduit" class="sidebar-bascule"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"/></svg><span class="visually-hidden">Réduire ou déployer le menu</span></label>
+  </div>
+  <nav class="site-nav" aria-label="Navigation principale">
+    <ul>
+        <li><a href="index.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg><span class="nav-libelle">Accueil</span></a></li>
+        <li><a href="portfolio.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="14" rx="1"/><path d="M4 12h7"/><path d="M11 5v14"/><path d="M16 12v7"/></svg><span class="nav-libelle">Portfolio</span></a></li>
+        <li><a href="excel.html" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4z"/><path d="M4 9.5h16"/><path d="M4 14.5h16"/><path d="M10 5v14"/></svg><span class="nav-libelle">Excel</span></a></li>
+        <li><a href="parcours.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg><span class="nav-libelle">Parcours</span></a></li>
+        <li><a href="contact.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span class="nav-libelle">Contact</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<main class="site-main" id="contenu">
+  <p class="fil-ariane"><a href="excel.html">Excel</a> — Modèle 02</p>
+  <h1>Casa Urpi — fiches techniques et coût matière</h1>
+  <p>Exercice de modélisation : construire un outil qui calcule automatiquement le coût matière d'une recette, du prix d'achat des ingrédients au prix de revente, et qui édite une fiche technique par plat. <em>Casa Urpi est un nom de marque inventé.</em></p>
+
+  <nav class="dossier" aria-label="Réalisations liées">
+    <span class="dossier-label">Dossier lié</span>
+    <a class="dossier-link" href="design-charte.html">Identité visuelle — charte graphique Casa Urpi</a>
+  </nav>
+
+  <h2>Contexte</h2>
+  <p>Le coût matière est la donnée qui conditionne la marge d'une carte. L'objectif était de réunir dans un seul classeur la base des recettes, les prix d'achat des ingrédients et le calcul du coût par portion, afin que toute mise à jour d'un prix se répercute automatiquement sur la fiche technique et sur le prix de revente.</p>
+
+  <h2>Méthode</h2>
+  <p>Le classeur s'organise autour de plusieurs blocs reliés entre eux :</p>
+  <ul>
+    <li>une base de données de recettes : chaque plat est relié à ses produits, unités et quantités par portion ;</li>
+    <li>un catalogue d'ingrédients, avec des prix d'achat relevés dans des catalogues fournisseurs réels (Rungis Market, Aventure Bio, Mozzalat, Compos-table) ;</li>
+    <li>la fiche technique d'un plat : coût par portion, coefficient de marge, frais fixes et TVA, jusqu'au prix de revente ;</li>
+    <li>des listes dynamiques de catégories et de recettes, sans doublon et triées automatiquement ;</li>
+    <li>l'édition d'une fiche par plat, sur la base d'un plateau de N pièces.</li>
+  </ul>
+  <p>Le classeur existe en deux versions : une version de calcul et une version de travail (.xlsm) qui ajoute une automatisation de tâches répétitives par macros VBA (ouverture de la fenêtre d'impression de la fiche technique).</p>
+  <figure>
+    <img src="assets/img/excel-02-fiche-bruschetta.png" alt="Fiche technique d'un plat : catégories, ingrédients, coût par portion et préparation.">
+    <figcaption>Fiche technique d'un plat : ingrédients, coût par portion et préparation.</figcaption>
+  </figure>
+
+  <h2>Architecture du classeur</h2>
+  <p>Le classeur part d'une base de recettes et d'une mercuriale de prix fournisseurs. Les fiches techniques ne contiennent aucun prix en dur : elles lisent la base par recherche et par listes dynamiques, ce qui garantit qu'une seule source de prix alimente tout le classeur.</p>
+  <div class="flux" role="group" aria-label="Schéma du flux de données entre les feuilles du classeur">
+    <p class="flux-stats">5 feuilles reliées entre elles · listes dynamiques sans doublon · version de travail avec automatisation VBA</p>
+    <div class="flux-chaine">
+      <div class="flux-niveau"><span class="flux-role">Données</span><span class="flux-feuille">Mercuriale (prix fournisseurs)</span><span class="flux-feuille">Base de recettes</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Calcul</span><span class="flux-feuille">Fiche technique</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Résultat</span><span class="flux-feuille">Synthèse des prix</span></div>
+    </div>
+  </div>
+  <p>Chaque fiche technique recalcule son coût matière à partir des recettes et des prix d'achat, puis détermine le prix de revente selon le coefficient, les frais fixes et la TVA. Une mise à jour d'un prix se répercute automatiquement sur toutes les fiches et sur la synthèse.</p>
+
+  <h2>Résultat</h2>
+  <p>Les tableaux ci-dessous reprennent la décomposition du coût matière d'un plat et les paramètres de calcul du prix de revente issus du modèle.</p>
+  <div class="table-wrap">
+    <table class="table">
+      <caption>Composition et coût matière par portion — Bruschetta classique</caption>
+      <thead>
+        <tr><th scope="col">Ingrédient</th><th scope="col">Quantité par portion</th><th scope="col">Coût matière HT</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Tomate</th><td>0,05 kg</td><td>0,148 €</td></tr>
+        <tr><th scope="row">Ail</th><td>0,001 kg</td><td>0,005 €</td></tr>
+        <tr><th scope="row">Huile d'olive</th><td>0,01 kg</td><td>0,129 €</td></tr>
+        <tr><th scope="row">Pain</th><td>0,05 kg</td><td>0,270 €</td></tr>
+        <tr><th scope="row">Parmesan</th><td>0,01 kg</td><td>0,259 €</td></tr>
+        <tr><th scope="row">Total</th><td>0,121 kg</td><td>0,810 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <caption>Paramètres de prix — Bruschetta classique</caption>
+      <thead>
+        <tr><th scope="col">Paramètre</th><th scope="col">Valeur</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Marge appliquée</th><td>30 %</td></tr>
+        <tr><th scope="row">Coefficient</th><td>1,4286</td></tr>
+        <tr><th scope="row">Frais fixes</th><td>8 %</td></tr>
+        <tr><th scope="row">TVA</th><td>20 %</td></tr>
+        <tr><th scope="row">Prix de revente TTC par pièce</th><td>1,48 €</td></tr>
+        <tr><th scope="row">Prix de revente TTC par plateau (20 pièces)</th><td>29,62 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <caption>Deux fiches du catalogue</caption>
+      <thead>
+        <tr><th scope="col">Recette</th><th scope="col">Portions</th><th scope="col">Poids par portion</th><th scope="col">Coût matière HT par portion</th><th scope="col">Prix de revente TTC par portion</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Bruschetta classique</th><td>20</td><td>121 g</td><td>0,81 €</td><td>1,48 €</td></tr>
+        <tr><th scope="row">Caprese classique</th><td>3</td><td>260 g</td><td>2,47 €</td><td>4,23 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Captures du modèle</h2>
+  <div class="tabs">
+    <input type="radio" name="onglet-modele-02" id="t1" class="tab-radio" checked>
+    <input type="radio" name="onglet-modele-02" id="t2" class="tab-radio">
+    <div class="tab-nav">
+      <label for="t1">Recherche et listes dynamiques</label>
+      <label for="t2">Base de recettes</label>
+    </div>
+    <div class="tab-panels">
+      <section class="tab-panel tab-1">
+        <figure>
+          <img src="assets/img/excel-02-archi-fiche.png" alt="Fiche technique avec les formules affichées : recherche, filtrage dynamique, suppression des doublons et gestion des erreurs.">
+          <figcaption>Fiche technique, formules affichées : le coût matière est reconstruit par recherche dans la base, filtrage dynamique et suppression des doublons, avec gestion des fiches incomplètes.</figcaption>
+        </figure>
+      </section>
+      <section class="tab-panel tab-2">
+        <figure>
+          <img src="assets/img/excel-02-bdd.png" alt="Base de recettes structurée en tableau : catégories, nom de la recette, produit, unité et quantité.">
+          <figcaption>Base de recettes structurée en tableau : chaque recette est reliée à ses produits, unités et quantités.</figcaption>
+        </figure>
+      </section>
+    </div>
+  </div>
+
+  <h2 id="formules">Fonctions et formules utilisées</h2>
+  <p>Le classeur combine recherche, listes dynamiques, gestion d'erreurs et agrégation :</p>
+  <ul class="formules-liste">
+    <li id="f-recherchex"><code>RECHERCHEX</code> — récupération du prix d'achat et de l'unité d'un produit dans la base d'ingrédients, et du conditionnement du plat.</li>
+    <li id="f-filtre"><code>FILTRE</code> — extraction dynamique des lignes d'une recette (ingrédients, catégories) selon la sélection.</li>
+    <li id="f-trier"><code>TRIER</code> — tri automatique des listes proposées, sans intervention manuelle.</li>
+    <li id="f-unique"><code>UNIQUE</code> — suppression des doublons dans les listes de catégories et de recettes.</li>
+    <li id="f-anchorarray"><code>ANCHORARRAY</code> — plage de résultat « déversée » (spill) référencée par l'opérateur <code>#</code>, à la base des listes déroulantes.</li>
+    <li id="f-sierreur"><code>SIERREUR</code> — renvoie une cellule vide si un produit est absent de la base, pour gérer les fiches incomplètes.</li>
+    <li id="f-somme"><code>SOMME</code> — agrégation du coût matière total d'une recette.</li>
+    <li id="f-lien"><code>LIEN_HYPERTEXTE</code> — création de liens cliquables dans le classeur.</li>
+  </ul>
+
+  <h2>Ce que cela démontre</h2>
+  <p>Construction d'un outil de calcul du coût matière relié à une base de données d'ingrédients sourcée, avec listes dynamiques et édition d'une fiche technique par plat. Maîtrise des fonctions de recherche, de filtrage dynamique et de gestion d'erreurs appliquées au calcul des marges.</p>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p>Portfolio personnel — © 2026. Dessins techniques CAO/DAO réalisés à titre personnel et lors d'un stage auprès d'un architecte indépendant ; les documents liés à la collectivité territoriale restent confidentiels et ne sont pas publiés. Automatisations VBA assistées par IA, relues et corrigées. Dossier complet présentable en entretien sur demande.</p>
+    <p class="maj">Dernière mise à jour : 10 octobre 2026</p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+</body>
+</html>

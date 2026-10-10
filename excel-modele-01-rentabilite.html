@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mensana — modèle d'exploitation et de rentabilité — Volpe Calogero — Dessinateur projeteur CAO/DAO</title>
+<meta name="description" content="Exercice de modélisation : modèle d'exploitation complet d'un restaurant de restauration saine (couverts, coût matière, ventes, bénéfice, prévisionnel sur cinq ans, tableaux croisés dynamiques).">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Volpe Calogero — Dessinateur projeteur CAO/DAO">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Mensana — modèle d'exploitation et de rentabilité — Volpe Calogero — Dessinateur projeteur CAO/DAO">
+    <meta property="og:description" content="Exercice de modélisation : modèle d'exploitation complet d'un restaurant de restauration saine (couverts, coût matière, ventes, bénéfice, prévisionnel sur cinq ans, tableaux croisés dynamiques).">
+    <meta property="og:url" content="https://calogerovolpe.github.io/mes-realisations-batiments/excel-modele-01-rentabilite.html">
+<script>try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t)}}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+<input type="checkbox" id="nav-reduit" class="nav-reduit" aria-label="Réduire ou déployer le menu">
+<aside class="site-sidebar">
+  <div class="sidebar-tete">
+    <a class="site-title" href="index.html" aria-label="Volpe Calogero — Dessinateur projeteur CAO/DAO"><span class="marque-nom">Volpe Calogero — Dessinateur projeteur CAO/DAO</span><span class="marque-sigle" aria-hidden="true">VC</span></a>
+    <label for="nav-reduit" class="sidebar-bascule"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"/></svg><span class="visually-hidden">Réduire ou déployer le menu</span></label>
+  </div>
+  <nav class="site-nav" aria-label="Navigation principale">
+    <ul>
+        <li><a href="index.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg><span class="nav-libelle">Accueil</span></a></li>
+        <li><a href="portfolio.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="14" rx="1"/><path d="M4 12h7"/><path d="M11 5v14"/><path d="M16 12v7"/></svg><span class="nav-libelle">Portfolio</span></a></li>
+        <li><a href="excel.html" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4z"/><path d="M4 9.5h16"/><path d="M4 14.5h16"/><path d="M10 5v14"/></svg><span class="nav-libelle">Excel</span></a></li>
+        <li><a href="parcours.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg><span class="nav-libelle">Parcours</span></a></li>
+        <li><a href="contact.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span class="nav-libelle">Contact</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<main class="site-main" id="contenu">
+  <p class="fil-ariane"><a href="excel.html">Excel</a> — Modèle 01</p>
+  <h1>Mensana — modèle d'exploitation et de rentabilité</h1>
+  <p>Exercice de modélisation financière : reconstituer l'exploitation prévisionnelle complète d'un restaurant de restauration saine, du coût matière au prévisionnel sur cinq ans. <em>Mensana est un nom de marque inventé.</em></p>
+
+  <nav class="dossier" aria-label="Réalisations liées">
+    <span class="dossier-label">Dossier lié</span>
+    <a class="dossier-link" href="bp-etude-01-restauration-saine.html">Étude de marché et business plan — Mensana</a>
+  </nav>
+
+  <h2>Contexte</h2>
+  <p>L'objectif était de bâtir un modèle unique reliant la fréquentation, le coût matière des recettes, la grille de ventes, les charges d'exploitation, le personnel et le financement, afin d'établir un compte de résultat prévisionnel et une projection sur cinq ans.</p>
+
+  <h2>Méthode</h2>
+  <p>Le classeur regroupe plusieurs blocs reliés entre eux :</p>
+  <ul>
+    <li>paramètres de fréquentation : couverts répartis entre emporté et livraison, et répartition du menu ;</li>
+    <li>catalogue d'ingrédients sourcés et fiches techniques : calcul du coût matière par recette ;</li>
+    <li>grille de ventes : quantités par plat, coefficient appliqué et marge brute ;</li>
+    <li>calcul des bénéfices : charges variables et invariables, seuil de rentabilité ;</li>
+    <li>bénéfice prévisionnel : projection mensuelle et annuelle sur cinq ans ;</li>
+    <li>personnel : masse salariale et planning de présence ;</li>
+    <li>financement de départ : besoin d'investissement et de fonds de roulement ;</li>
+    <li>analyse des données par tableaux croisés dynamiques.</li>
+  </ul>
+
+  <h2>Architecture du classeur</h2>
+  <p>Le classeur repose sur neuf feuilles reliées entre elles : chaque hypothèse n'est saisie qu'une seule fois, puis se propage automatiquement jusqu'au résultat. Le schéma ci-dessous résume le sens de circulation des données.</p>
+  <div class="flux" role="group" aria-label="Schéma du flux de données entre les feuilles du classeur">
+    <p class="flux-stats">9 feuilles · environ 7 700 formules · 89 règles de mise en forme conditionnelle</p>
+    <div class="flux-chaine">
+      <div class="flux-niveau"><span class="flux-role">Entrées</span><span class="flux-feuille">Paramètres</span><span class="flux-feuille">Liste d'ingrédients</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Calculs</span><span class="flux-feuille">Menu</span><span class="flux-feuille">Ventes</span><span class="flux-feuille">Calcul ingrédient</span><span class="flux-feuille">Personnels</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Synthèse</span><span class="flux-feuille">Synthèse</span></div>
+      <div class="flux-fleche" aria-hidden="true">↓</div>
+      <div class="flux-niveau"><span class="flux-role">Résultat</span><span class="flux-feuille">Bénéfice</span></div>
+    </div>
+  </div>
+  <p>Les données ne sont jamais ressaisies : la feuille de ventes renvoie aux prix de la liste d'ingrédients, la synthèse agrège les ventes par période, et la feuille de bénéfice reprend la synthèse et le personnel. Modifier une seule hypothèse suffit à recalculer l'ensemble du classeur.</p>
+
+  <h2>Résultat</h2>
+  <p>Les tableaux ci-dessous reprennent les hypothèses de fréquentation et la projection prévisionnelle issues du modèle.</p>
+  <div class="table-wrap">
+    <table class="table">
+      <caption>Fréquentation retenue</caption>
+      <thead>
+        <tr><th scope="col">Canal</th><th scope="col">Couverts</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Emporté</th><td>70</td></tr>
+        <tr><th scope="row">Livraison</th><td>20</td></tr>
+        <tr><th scope="row">Total</th><td>90</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <caption>Projection prévisionnelle par année</caption>
+      <thead>
+        <tr><th scope="col">Année</th><th scope="col">Chiffre d'affaires</th><th scope="col">Bénéfice brut</th><th scope="col">Après impôts</th><th scope="col">Cumulé</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">1</th><td>352 683,76 €</td><td>106 141,94 €</td><td>79 606,46 €</td><td>79 606,46 €</td></tr>
+        <tr><th scope="row">2</th><td>370 317,95 €</td><td>111 449,04 €</td><td>83 586,78 €</td><td>163 193,23 €</td></tr>
+        <tr><th scope="row">3</th><td>388 833,84 €</td><td>117 021,49 €</td><td>87 766,12 €</td><td>250 959,35 €</td></tr>
+        <tr><th scope="row">4</th><td>408 275,54 €</td><td>122 872,56 €</td><td>92 154,42 €</td><td>343 113,77 €</td></tr>
+        <tr><th scope="row">5</th><td>428 689,31 €</td><td>129 016,19 €</td><td>96 762,14 €</td><td>439 875,92 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Captures du modèle</h2>
+  <div class="tabs">
+    <input type="radio" name="onglet-modele-01" id="t1" class="tab-radio" checked>
+    <input type="radio" name="onglet-modele-01" id="t2" class="tab-radio">
+    <input type="radio" name="onglet-modele-01" id="t3" class="tab-radio">
+    <div class="tab-nav">
+      <label for="t1">Chaînage entre feuilles</label>
+      <label for="t2">Tableaux croisés dynamiques</label>
+      <label for="t3">Vues des feuilles</label>
+    </div>
+    <div class="tab-panels">
+      <section class="tab-panel tab-1">
+        <figure>
+          <img src="assets/img/excel-01-archi-ventes.png" alt="Feuille de ventes avec les formules affichées : renvoi vers la liste d'ingrédients et référence structurée du tableau.">
+          <figcaption>Feuille de ventes, formules affichées : chaque ligne renvoie au prix d'achat de la liste d'ingrédients, et la marge se calcule avec les noms de colonnes du tableau.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/excel-01-archi-synthese.png" alt="Feuille de synthèse avec les formules affichées : agrégation des ventes par période.">
+          <figcaption>Feuille de synthèse, formules affichées : chaque total est construit par renvois croisés vers la feuille de ventes, puis agrégé.</figcaption>
+        </figure>
+      </section>
+      <section class="tab-panel tab-2">
+        <figure>
+          <img src="assets/img/excel-01-tcd.png" alt="Tableau croisé dynamique du modèle : analyse croisée des coûts.">
+          <figcaption>Tableau croisé dynamique : analyse croisée des coûts matière.</figcaption>
+        </figure>
+      </section>
+      <section class="tab-panel tab-3">
+        <figure>
+          <img src="assets/img/excel-01-parametres.png" alt="Feuille de paramètres du modèle 01 : fréquentation prévisionnelle, répartition des couverts entre emporté et livraison, et répartition du menu.">
+          <figcaption>Paramètres de fréquentation : couverts répartis entre emporté et livraison, et répartition du menu.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/excel-01-ingredients.png" alt="Feuille des ingrédients du modèle 01 : liste des ingrédients sourcés et sommes par catégorie.">
+          <figcaption>Catalogue d'ingrédients sourcés : liste et sommes par catégorie, base du calcul du coût matière.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/excel-01-foodcost.png" alt="Feuille de calcul du coût matière du modèle 01 : coût matière par recette du menu.">
+          <figcaption>Coût matière du menu : calcul par recette à partir des ingrédients.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/excel-01-ventes.png" alt="Feuille de ventes du modèle 01 : quantités par plat, coefficient appliqué et marge brute.">
+          <figcaption>Grille de ventes : quantités, coefficient et marge brute par plat.</figcaption>
+        </figure>
+      </section>
+    </div>
+  </div>
+
+  <h2 id="formules">Fonctions et formules utilisées</h2>
+  <p>Le classeur combine agrégations, arrondis, calculs horaires, lecture de tableaux croisés dynamiques et liaisons entre feuilles :</p>
+  <ul class="formules-liste">
+    <li id="f-somme"><code>SOMME</code> — agrégation des ventes, des coûts et des totaux par période ; utilisée aussi par les cœurs de tableaux croisés dynamiques.</li>
+    <li id="f-arrondi"><code>ARRONDI</code> — arrondi des prix et des coûts à l'unité commerciale.</li>
+    <li id="f-nbval"><code>NBVAL</code> — comptage des références actives d'une liste.</li>
+    <li id="f-temps"><code>TEMPS</code> — construction des plages horaires du planning.</li>
+    <li id="f-mod"><code>MOD</code> — découpage des horaires en tranches régulières.</li>
+    <li id="f-ligne"><code>LIGNE</code> — indexation des lignes pour lier les blocs entre eux.</li>
+    <li id="f-liredonnees"><code>LIREDONNEESTABCROISDYNAMIQUE</code> — lecture des résultats d'un tableau croisé dynamique.</li>
+    <li id="tcd">Tableaux croisés dynamiques — 9 analyses croisées du modèle (coûts matière, planning).</li>
+  </ul>
+
+  <h2>Ce que cela démontre</h2>
+  <p>Construction d'un modèle d'exploitation complet et cohérent, du coût matière au prévisionnel pluriannuel. Maîtrise des tableaux croisés dynamiques et des fonctions d'agrégation et de calcul pour l'analyse de gestion.</p>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p>Portfolio personnel — © 2026. Dessins techniques CAO/DAO réalisés à titre personnel et lors d'un stage auprès d'un architecte indépendant ; les documents liés à la collectivité territoriale restent confidentiels et ne sont pas publiés. Automatisations VBA assistées par IA, relues et corrigées. Dossier complet présentable en entretien sur demande.</p>
+    <p class="maj">Dernière mise à jour : 10 octobre 2026</p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+</body>
+</html>

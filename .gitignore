@@ -1,0 +1,24 @@
+# Documents sources de référence — LECTURE SEULE, JAMAIS PUBLIÉS
+/docs/
+
+# Règles de travail — contiennent des noms réels, JAMAIS PUBLIÉES
+.clinerules/
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+*.code-workspace
+
+# Divers
+*.log
+*.bak
+*.tmp
+~$*
+
+# Fichiers locaux de travail (non publiés)
+.gitignore.md
+arboresence.md
