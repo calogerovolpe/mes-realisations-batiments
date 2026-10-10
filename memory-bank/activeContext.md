@@ -13,9 +13,16 @@ URL : https://calogerovolpe.github.io/mes-realisations-batiments/
   précédent / suivant. Images : autocad-01..20.jpg, releve-01..04.jpg,
   releve-photo-01..02.jpg (< 300 Ko).
 - Parcours : réécrit depuis le CV /docs/BAT — profil dessinateur projeteur CAO/DAO,
-  compétences techniques (.spec), frise (chrono) formations + expériences, fenêtres de
-  détail, langues, centres d'intérêt, renvoi au portfolio. Le stage de deux mois chez un
-  architecte indépendant est rattaché à la formation AFPA (fin de formation).
+  compétences techniques (.spec) incluant les notions de BIM et l'usage d'un logiciel
+  SIG professionnel, frise (chrono) formations + expériences, fenêtres de détail,
+  langues, centres d'intérêt, renvoi au portfolio. Le stage de deux mois chez un
+  architecte indépendant est rattaché à la formation intensive d'un an à l'AFPA
+  (fin de formation). Les mobilités personnelles (déménagements 2025 « Retour en
+  Belgique » et 2020 « Déménagement vers Paris ») sont réintégrées dans la frise
+  (.chrono-demenagement + légende « Mobilité personnelle »). Section « Diplômes et
+  certifications » : diplôme Bac pro et attestation de compétence AFPA (dessinateur
+  projeteur), chacun affiché en pop-up (.visionneuse) — images assets/img/
+  diplome-bac-pro.jpg et attestation-competence-afpa.jpg (< 300 Ko).
 - Thème « plan technique » et navigation (Accueil · Portfolio · Excel · Parcours ·
   Contact) du Jalon 1 conservés ; sections Business plans et Identité visuelle supprimées.
 - Excel (Jalon 3) : excel.html et les trois modèles recentrés « chiffrage et

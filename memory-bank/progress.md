@@ -17,6 +17,11 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       d'investissement) ; liens morts corrigés ; contact, mentions légales et 404
       adaptés ; SEO et contrôle final. Version CAO/DAO close (3 jalons).
 
+- [x] Complément parcours (hors jalon) : mobilités personnelles (déménagements 2025 et
+      2020) réintégrées dans la frise ; mentions BIM et SIG (formation intensive d'un an
+      à l'AFPA pour devenir dessinateur projeteur) ; section « Diplômes et certifications »
+      avec diplôme Bac pro et attestation de compétence AFPA affichés en pop-up.
+
 ## Rappel de fin de jalon
 git add . → git commit → git push origin main → git status propre → page vérifiée en
 ligne → memory-bank mis à jour et poussé → recherche des noms interdits.
