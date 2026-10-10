@@ -4,7 +4,7 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : Jalon 2 (portfolio précisé + visionneuse + parcours) réalisé.
+État : Jalon 3 (Excel « chiffrage / quantification » + finitions) réalisé — les trois jalons de la version CAO/DAO sont clos.
 - Portfolio : 26 planches en 6 groupes — captures d'écran AutoCAD (A01-A09), relevé
   d'existant (A10-A12 + 2 photos), organisation du projet (A13), plan projet coté
   (A14-A17 et A20), projet de cabanon (A18-A19), présentations cartouche et échelle
@@ -18,8 +18,9 @@ URL : https://calogerovolpe.github.io/mes-realisations-batiments/
   architecte indépendant est rattaché à la formation AFPA (fin de formation).
 - Thème « plan technique » et navigation (Accueil · Portfolio · Excel · Parcours ·
   Contact) du Jalon 1 conservés ; sections Business plans et Identité visuelle supprimées.
-- Reste à retravailler au Jalon 3 : excel.html et les trois modèles (chiffrage /
-  quantification), puis contact, mentions légales, 404, SEO.
+- Excel (Jalon 3) : excel.html et les trois modèles recentrés « chiffrage et
+  quantification » (chiffrage d'exploitation, quantification des composants,
+  estimation d'investissement) ; liens morts des fiches corrigés vers le portfolio.
 
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
@@ -28,6 +29,8 @@ Décisions verrouillées
 - « Guignies, zone frontalière Lille » (pas de code postal).
 - Montreuil : décrit en texte, jamais d'image.
 
-À faire (jalon 3)
-- excel.html + 3 modèles : recentrer sur chiffrage / quantification / suivi budgétaire.
-- contact.html, mentions-legales.html, 404.html, SEO et contrôle final des noms interdits.
+Points ouverts
+- contact.html : le formulaire pointe vers Formspree ; l'identifiant (f/…) reste à
+  renseigner par le propriétaire (« VOTRE_ID »).
+- Captions des planches : exactes mais génériques ; affinables si souhaité.
+- JavaScript total ≈ 25,6 Ko (au-dessus de l'ancienne limite de 24 Ko, viewer.js inclus).

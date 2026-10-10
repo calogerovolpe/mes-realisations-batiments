@@ -12,8 +12,10 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       visionneuse au clic avec navigation à la molette et au clavier) et Parcours
       réécrit depuis le CV /docs/BAT (profil dessinateur projeteur CAO/DAO ; stage
       de fin de formation chez un architecte indépendant).
-- [ ] Jalon 3 — Excel recentré « chiffrage / quantification » (profil deviseur) et
-      finitions : contact, mentions légales, 404, SEO, contrôle final.
+- [x] Jalon 3 — Excel recentré « chiffrage / quantification » (profil deviseur :
+      chiffrage d'exploitation, quantification des composants, estimation
+      d'investissement) ; liens morts corrigés ; contact, mentions légales et 404
+      adaptés ; SEO et contrôle final. Version CAO/DAO close (3 jalons).
 
 ## Rappel de fin de jalon
 git add . → git commit → git push origin main → git status propre → page vérifiée en
