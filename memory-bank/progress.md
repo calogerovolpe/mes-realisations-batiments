@@ -58,6 +58,14 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       écrasées. Règle CSS ajoutée dans assets/css/style.css ; HTML et JS
       inchangés.
 
+- [x] Audit mobile first (11 octobre 2026) : cartouche de l'accueil sur une seule
+      colonne sous 40 rem (même correctif que .spec) ; zone sûre iOS prise en
+      charge (viewport-fit=cover sur les 12 pages + env(safe-area-inset-bottom)
+      sur la barre inférieure, la bascule de thème, le padding du corps et le
+      bouton retour en haut) ; breakpoint 480px harmonisé en 30rem. RESTENT
+      optionnels : zones tactiles < 44 px, bulle de compétences sur mobile,
+      poids du JavaScript (> 24 Ko).
+
 - [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
       parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore
       l'ancienne adresse (texte vectoriel en police sous-ensemble) — le régénérer depuis

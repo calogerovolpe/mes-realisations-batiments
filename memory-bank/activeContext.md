@@ -4,7 +4,7 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (correction responsive des fiches .spec sur la page parcours). Avant : navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage publié au téléchargement.
+État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (audit mobile first — cartouche accueil sur une colonne, zone sûre iOS, breakpoints harmonisés). Avant : correction responsive des fiches .spec ; navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage publié au téléchargement.
 - Portfolio : 35 planches en 8 groupes — captures d'écran AutoCAD (A01-A09) ;
   relevé d'existant (A10-A12 réalisés par une entreprise externe + PH·01-PH·02
   réalisés personnellement pour le patrimoine bâti municipal, diffusés avec
@@ -89,6 +89,22 @@ Complément (11 octobre 2026) — fiche .spec responsive sur mobile
   « Diplômes et certifications » de parcours.html (même composant .spec).
   Règle ajoutée dans assets/css/style.css, juste après le bloc .spec. HTML et JS
   inchangés ; aucune incidence sur l'impression (règle en écran uniquement).
+
+Complément (11 octobre 2026) — audit mobile first
+- Audit complet de la feuille de style et des 12 pages, puis corrections ciblées
+  (assets/css/style.css + balises viewport) :
+  · `.cartouche-ligne` (accueil, bloc Profil / Formation / Outils / Mobilité)
+    passe en une seule colonne sous 40 rem — même correction que `.spec`.
+  · Zone sûre iOS : `viewport-fit=cover` sur les 12 pages ; la barre de
+    navigation inférieure, sa bascule de thème, le `padding-bottom` du corps,
+    le `scroll-padding-bottom` et le bouton « retour en haut » intègrent
+    `env(safe-area-inset-bottom, 0px)`.
+  · Breakpoint desktop-first `480px` harmonisé en `30rem`.
+- Points non traités (notés comme optionnels) : zones tactiles < 44 px
+  (.filtre-btn, .fonctions-liste a, .sommaire a) ; bulle « Compétences
+  acquises » (.chrono-bulle) accessible au survol/clavier seulement (le contenu
+  reste disponible via la modale « Voir le détail ») ; JavaScript ≈ 25,6 Ko
+  (> limite de 24 Ko de la règle 04).
 
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
