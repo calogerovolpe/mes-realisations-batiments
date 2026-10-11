@@ -4,7 +4,7 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (audit mobile first — cartouche accueil sur une colonne, zone sûre iOS, breakpoints harmonisés). Avant : correction responsive des fiches .spec ; navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage publié au téléchargement.
+État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (visionneuse — zoom des images, contraste des boutons en thème clair/sombre et attestation AFPA redressée). Avant : audit mobile first (cartouche accueil une colonne, zone sûre iOS, breakpoints) ; fiche .spec responsive ; navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage téléchargeable.
 - Portfolio : 35 planches en 8 groupes — captures d'écran AutoCAD (A01-A09) ;
   relevé d'existant (A10-A12 réalisés par une entreprise externe + PH·01-PH·02
   réalisés personnellement pour le patrimoine bâti municipal, diffusés avec
@@ -105,6 +105,19 @@ Complément (11 octobre 2026) — audit mobile first
   acquises » (.chrono-bulle) accessible au survol/clavier seulement (le contenu
   reste disponible via la modale « Voir le détail ») ; JavaScript ≈ 25,6 Ko
   (> limite de 24 Ko de la règle 04).
+
+
+Complément (11 octobre 2026) — visionneuse : zoom, contraste des boutons, attestation
+- Zoom des images dans l'aperçu (.visionneuse), ajouté par JavaScript (assets/js/viewer.js) :
+  clic sur l'image ou bouton « +/− » (en haut à gauche) pour basculer entre ajusté et taille
+  réelle ; l'image zoomée défile à la molette, aux flèches et au pavé tactile (le défilement
+  remplace alors le changement de planche) ; le zoom est réinitialisé à chaque ouverture,
+  fermeture ou changement de planche. Sans JavaScript, l'aperçu reste affiché en ajusté.
+- Boutons de la visionneuse (flèches ‹ › et croix de fermeture) : fond blanc et glyphes encre,
+  indépendants du thème. L'aperçu étant toujours posé sur un fond sombre, les couleurs liées
+  au thème (var(--encre)) les rendaient illisibles en thème clair. Règle dans assets/css/style.css.
+- Attestation de compétence AFPA (assets/img/attestation-competence-afpa.jpg) : redressée
+  (rotation 180°) et ré-encodée sous 300 Ko.
 
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).

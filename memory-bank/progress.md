@@ -66,6 +66,15 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       optionnels : zones tactiles < 44 px, bulle de compétences sur mobile,
       poids du JavaScript (> 24 Ko).
 
+
+- [x] Correctif visionneuse (11 octobre 2026) : zoom des images dans les aperçus (clic sur
+      l'image ou bouton « +/− » injecté par JavaScript ; défilement de l'image zoomée à la
+      molette, aux flèches et au pavé tactile ; zoom réinitialisé à chaque ouverture) ;
+      contraste des boutons de la visionneuse (flèches précédent / suivant et croix de
+      fermeture) — fond blanc et glyphes encre au lieu de couleurs liées au thème,
+      illisibles en thème clair sur le fond sombre de l'aperçu ; attestation de compétence
+      AFPA redressée (rotation 180°) et ré-encodée sous 300 Ko.
+
 - [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
       parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore
       l'ancienne adresse (texte vectoriel en police sous-ensemble) — le régénérer depuis

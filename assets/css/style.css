@@ -1937,6 +1937,28 @@ html[data-theme="clair"] {
   height: auto;
   background: #ffffff;
 }
+
+/* — Zoom des images (boutons et clic injectés par JavaScript) — */
+.visionneuse-boite img { cursor: zoom-in; }
+.visionneuse-boite.est-zoom {
+  overflow: auto;
+  overscroll-behavior: contain;
+  cursor: zoom-out;
+}
+.visionneuse-boite.est-zoom img {
+  max-width: none;
+  max-height: none;
+  flex: none;
+  cursor: zoom-out;
+}
+.visionneuse-btn[data-role="zoom"] {
+  top: 0.85rem;
+  left: 0.85rem;
+  transform: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.2rem;
+}
 .visionneuse-boite figcaption {
   padding: 0.5rem 0.75rem;
   border-top: 1px solid var(--filet);
@@ -1955,10 +1977,10 @@ html[data-theme="clair"] {
   justify-content: center;
   width: 2.2rem;
   height: 2.2rem;
-  border: 1px solid var(--trait);
+  border: 1px solid #ffffff;
   border-radius: 999px;
-  background: rgba(10, 22, 34, 0.92);
-  color: var(--encre);
+  background: #ffffff;
+  color: #0b1a2b;
   text-decoration: none;
   font-size: 1.1rem;
   line-height: 1;
@@ -1974,10 +1996,10 @@ html[data-theme="clair"] {
   z-index: 3;
   width: 2.6rem;
   height: 3.4rem;
-  border: 1px solid var(--trait);
+  border: 1px solid #ffffff;
   border-radius: 6px;
-  background: rgba(10, 22, 34, 0.9);
-  color: var(--encre);
+  background: #ffffff;
+  color: #0b1a2b;
   font: inherit;
   font-size: 1.5rem;
   line-height: 1;
