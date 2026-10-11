@@ -4,7 +4,7 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage publié au téléchargement).
+État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (correction responsive des fiches .spec sur la page parcours). Avant : navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage publié au téléchargement.
 - Portfolio : 35 planches en 8 groupes — captures d'écran AutoCAD (A01-A09) ;
   relevé d'existant (A10-A12 réalisés par une entreprise externe + PH·01-PH·02
   réalisés personnellement pour le patrimoine bâti municipal, diffusés avec
@@ -81,6 +81,14 @@ Complément (11 octobre 2026) — navigation, pied de page, Revit, téléchargem
 - Rapport de stage 2022 publié au téléchargement (version expurgée) depuis le
   portfolio, l'étude de cas et le parcours, avec la mention « base de
   connaissances, nettement amélioré depuis (Ville de Montreuil et autres projets) ».
+
+Complément (11 octobre 2026) — fiche .spec responsive sur mobile
+- Correction : sous 40 rem, la fiche « clé / valeur » (.spec) passe en une seule
+  colonne (clé au-dessus, valeur en dessous) ; le trait de la clé devient
+  horizontal. S'applique aux sections « Compétences techniques » et
+  « Diplômes et certifications » de parcours.html (même composant .spec).
+  Règle ajoutée dans assets/css/style.css, juste après le bloc .spec. HTML et JS
+  inchangés ; aucune incidence sur l'impression (règle en écran uniquement).
 
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).

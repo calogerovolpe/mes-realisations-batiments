@@ -51,6 +51,13 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       mention « base de connaissances, amélioré depuis » ; README, memory-bank et règle 02
       mis à jour.
 
+- [x] Correctif responsive (11 octobre 2026) : sur mobile (≤ 40 rem), la fiche
+      « clé / valeur » (.spec) de parcours.html — sections « Compétences
+      techniques » et « Diplômes et certifications » — s'affiche sur une seule
+      colonne (clé au-dessus, valeur en dessous) au lieu de deux colonnes
+      écrasées. Règle CSS ajoutée dans assets/css/style.css ; HTML et JS
+      inchangés.
+
 - [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
       parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore
       l'ancienne adresse (texte vectoriel en police sous-ensemble) — le régénérer depuis
