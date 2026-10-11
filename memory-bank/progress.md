@@ -35,9 +35,21 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       centre, titre de marque et recherche masqués, Ctrl+K désactivé) ; barre d'impression
       limitée à parcours.html ; nouvelles pages « Ce que je cherche » et « Étude de cas —
       rapport de stage » (extraits de dessins) ; CV publié au téléchargement après
-      expurgation (code postal et téléphone retirés). Le rapport de stage n'est pas publié
-      en PDF (nom de l'architecte et autres noms de personnes interdits) — voir
-      activeContext.md.
+      expurgation (code postal et téléphone retirés). Le rapport de stage n'était pas
+      publié en PDF à ce stade (noms de personnes interdits) — voir la mise à jour du
+      11 octobre 2026 ci-dessous.
+
+- [x] Complément (11 octobre 2026) : bouton « Ce que je cherche » (vert) placé à côté de
+      « Voir le parcours complet » sur l'accueil ; marge de séparation entre les chiffres
+      et le sommaire ; navigation de fin de page (section précédente / suivante) sur les
+      5 sections et « modèle précédent / suivant » sur les 3 modèles de chiffrage ; pied
+      de page restructuré en trois colonnes de liens sur les 12 pages ; groupe
+      « Modélisation 3D — Revit » (RVT·01-RVT·02 : maison reconstruite dans Revit depuis
+      les plans DWG importés, à l'échelle réelle) — portfolio à 35 planches ; légende du
+      plan projet précisée (environnement voisin en gris clair) ; rapport de stage 2022
+      expurgé publié au téléchargement (assets/fichiers/rapport-stage-2022.pdf) avec
+      mention « base de connaissances, amélioré depuis » ; README, memory-bank et règle 02
+      mis à jour.
 
 - [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
       parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore

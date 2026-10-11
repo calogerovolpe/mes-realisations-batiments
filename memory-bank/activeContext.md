@@ -4,15 +4,17 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : Jalon 3 (Excel « chiffrage / quantification » + finitions) réalisé — les trois jalons de la version CAO/DAO sont clos.
-- Portfolio : 33 planches en 7 groupes — captures d'écran AutoCAD (A01-A09) ;
+État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage publié au téléchargement).
+- Portfolio : 35 planches en 8 groupes — captures d'écran AutoCAD (A01-A09) ;
   relevé d'existant (A10-A12 réalisés par une entreprise externe + PH·01-PH·02
   réalisés personnellement pour le patrimoine bâti municipal, diffusés avec
-  autorisation) ; organisation du projet (A13) ; plan projet coté (A14-A17 et A20) ;
-  projet de cabanon (A18-A19) ; présentations cartouche et échelle (REL·01-04,
-  cartouches — nom d'entreprise et adresse — masqués) ; modélisation 3D SketchUp
-  (SKP·01-07 : habitation, « L'Appartement » lié au modèle Excel 03, restaurant
-  180 m²). Chaque planche ouvre un aperçu agrandi (.visionneuse, CSS :target) ; le
+  autorisation) ; organisation du projet (A13) ; plan projet coté (A14-A17 et A20,
+  environnement voisin figuré en gris clair) ; projet de cabanon (A18-A19) ;
+  présentations cartouche et échelle (REL·01-04, cartouches — nom d'entreprise et
+  adresse — masqués) ; modélisation 3D SketchUp (SKP·01-07 : habitation,
+  « L'Appartement » lié au modèle Excel 03, restaurant 180 m²) ; modélisation 3D
+  Revit (RVT·01-RVT·02 : maison reconstruite depuis les plans DWG importés à
+  l'échelle réelle). Chaque planche ouvre un aperçu agrandi (.visionneuse, CSS :target) ; le
   module viewer.js ajoute la navigation à la molette et au clavier. Images :
   autocad-01..20.jpg, releve-01..04.jpg, releve-photo-01..02.jpg, skp-*.jpg
   (< 300 Ko).
@@ -55,12 +57,30 @@ Complément (10 octobre 2026) — chiffrage, barre mobile, pages cibles, téléc
   parcours, le contact et la recherche globale. Ces deux pages ne figurent pas
   dans la barre de navigation : celle-ci reste à 5 entrées pour garder Accueil
   parfaitement au centre sur smartphone.
-- Téléchargement : un seul document publié, le CV, après expurgation
-  (assets/fichiers/cv-volpe-calogero.pdf) — code postal et numéro de
-  téléphone retirés. Le rapport de stage n'est PAS publié au téléchargement : il
-  contient le nom de l'architecte et d'autres noms de personnes (interdits) ainsi
-  qu'un nom de rue dans l'illustration de couverture. Trois extraits de dessins
-  sans donnée nominative sont publiés en images (assets/img/rapport-stage-*.png).
+- Téléchargement : DEUX documents publiés, tous deux expurgés — le CV
+  (assets/fichiers/cv-volpe-calogero.pdf) et le rapport de stage 2022
+  (assets/fichiers/rapport-stage-2022.pdf, noms de personnes et d'entreprises et
+  adresses retirés, fourni par le propriétaire). Trois extraits de dessins sans
+  donnée nominative restent publiés en images (assets/img/rapport-stage-*.png).
+
+Complément (11 octobre 2026) — navigation, pied de page, Revit, téléchargement
+- Accueil : bouton « Ce que je cherche » (vert, .btn-vert) placé à côté de
+  « Voir le parcours complet » ; marge de séparation entre les chiffres clés
+  (.stats) et le sommaire ; compteur porté à 35 planches.
+- Navigation de fin de page (.nav-fin) : chaque section pointe vers la précédente
+  et la suivante — Accueil → Portfolio → Chiffrage → Parcours → Contact. Les trois
+  pages de modèles Excel pointent vers le modèle précédent / suivant. Masquée à
+  l'impression (print.css).
+- Pied de page : navigation en trois colonnes (Sections / En détail / Informations)
+  sur les 12 pages ; texte imposé conservé ; bouton « copier l'e-mail » masqué dans
+  le pied de page.
+- Portfolio : groupe « Modélisation 3D — Revit » (RVT·01-RVT·02) — maison
+  reconstruite dans Revit à partir des plans DWG importés comme référence (échelle
+  réelle) ; légende du plan projet précisée (constructions voisines, voirie et
+  végétation en gris très clair pour mettre le projet en avant).
+- Rapport de stage 2022 publié au téléchargement (version expurgée) depuis le
+  portfolio, l'étude de cas et le parcours, avec la mention « base de
+  connaissances, nettement amélioré depuis (Ville de Montreuil et autres projets) ».
 
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
@@ -68,15 +88,16 @@ Décisions verrouillées
 - Un seul e-mail : contact@calogero-volpe.eu. Aucun numéro de téléphone, aucune adresse.
 - « Guignies, zone frontalière Lille » (pas de code postal).
 - Montreuil : décrit en texte ; seuls PH·01 et PH·02 (relevés diffusés avec autorisation) sont publiés, aucun autre visuel.
+- Deux documents téléchargeables autorisés par le propriétaire : le CV et le rapport de stage expurgé (voir progress.md).
 
 Points ouverts
 - contact.html : le formulaire pointe vers Formspree ; l'identifiant (f/…) reste à
   renseigner par le propriétaire (« VOTRE_ID »).
 - Captions des planches : exactes mais génériques ; affinables si souhaité.
 - JavaScript total ≈ 25,6 Ko (au-dessus de l'ancienne limite de 24 Ko, viewer.js inclus).
-- Rapport de stage : le PDF ne peut pas être publié en l'état (nom de l'architecte,
-  autres noms de personnes, nom de rue dans la couverture). Fournir une version
-  anonymisée si le téléchargement est souhaité.
+- Rapport de stage : version expurgée publiée (assets/fichiers/rapport-stage-2022.pdf,
+  ~11 Mo — poids élevé, compaction possible si nécessaire). Vérifier qu'aucun nom de
+  personne ni adresse ne subsiste dans le PDF avant toute nouvelle version.
 - CV PDF publié (assets/fichiers/cv-volpe-calogero.pdf) : l'ancienne adresse
   bx.volpe@gmail.com subsiste dans le texte visible (police sous-ensemble, texte
   vectoriel) — non modifiable par substitution. À régénérer depuis la source

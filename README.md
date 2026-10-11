@@ -15,7 +15,7 @@ aucun build, aucune dépendance externe, aucune police téléchargée.
 - `assets/css/style.css` — feuille de style unique (thème « plan technique »)
 - `assets/css/print.css` — feuille d'impression
 - `assets/img/` — planches du portfolio, captures et extraits
-- `assets/fichiers/` — CV au format PDF (seul document téléchargeable)
+- `assets/fichiers/` — CV et rapport de stage (2022, expurgé) au format PDF — documents téléchargeables
 - `assets/js/` — point d'entrée `main.js` (defer) + modules
 - `memory-bank/` — état d'avancement du projet
 

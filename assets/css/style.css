@@ -484,7 +484,7 @@ body {
 /* Chiffres clés (page d'accueil) — bande de repères factuels */
 .stats {
   list-style: none;
-  margin: 1.75rem 0 0;
+  margin: 1.75rem 0 2.75rem;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
@@ -543,6 +543,57 @@ body {
   background: var(--accent-fond);
   color: var(--accent-fonce);
 }
+/* Variante « résultat » (vert sauge) — bouton affirmé sur un fond clair */
+.btn-vert {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  color: #fff;
+}
+.btn-vert:hover { filter: brightness(1.08); box-shadow: var(--ombre-2); color: #fff; }
+.btn-vert:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+
+/* Navigation de fin de page : section précédente / suivante.
+   Deux pastilles posées de part et d'autre (gauche / droite) ; elles passent
+   l'une sous l'autre sur écran étroit. */
+.nav-fin {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin: 2.75rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--filet);
+}
+.nav-fin-lien {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 12rem;
+  max-width: 22rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--fond-champ);
+  box-shadow: var(--ombre-1);
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.nav-fin-lien:hover { border-color: var(--accent); box-shadow: var(--ombre-2); background: var(--accent-fond); }
+.nav-fin-lien:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav-fin-precedent { align-items: flex-start; text-align: left; }
+.nav-fin-suivant { align-items: flex-end; text-align: right; margin-left: auto; }
+.nav-fin-direction {
+  font-family: var(--police-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--encre-douce);
+}
+.nav-fin-titre { font-weight: 600; color: var(--accent); }
+@media (max-width: 34rem) {
+  .nav-fin-lien { flex: 1 1 100%; min-width: 0; max-width: none; }
+  .nav-fin-suivant { align-items: flex-start; text-align: left; margin-left: 0; }
+}
 
 /* Pied de page — bande sombre pour marquer nettement la séparation */
 .site-footer {
@@ -560,6 +611,29 @@ body {
 .site-footer a { color: #f0b48f; }
 .site-footer a:hover { color: #ffffff; }
 .site-footer .maj { font-size: 0.85rem; color: #bdb3a1; }
+
+/* Navigation structurée du pied de page — colonnes de liens */
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1.5rem;
+  margin: 0 0 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #3b352c;
+}
+.footer-nav-titre {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+.footer-nav ul { list-style: none; margin: 0; padding: 0; }
+.footer-nav li { margin: 0 0 0.3rem; }
+.footer-nav a { text-decoration: none; }
+.footer-nav a:hover { text-decoration: underline; }
+/* Le pied de page affiche l'adresse en clair : pas de bouton « copier » ici */
+.site-footer .copy-email { display: none; }
 
 /* Fil d'Ariane */
 .fil-ariane {
