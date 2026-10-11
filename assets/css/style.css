@@ -327,9 +327,10 @@ body {
 @media (max-width: 60rem) {
   body {
     display: block;
-    padding-bottom: 4.6rem; /* réserve la hauteur de la barre fixe */
+    /* réserve la hauteur de la barre fixe, plus la zone sûre iOS */
+    padding-bottom: calc(4.6rem + env(safe-area-inset-bottom, 0px));
   }
-  html { scroll-padding-top: 1rem; scroll-padding-bottom: 5rem; }
+  html { scroll-padding-top: 1rem; scroll-padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px)); }
 
   .site-sidebar {
     grid-column: auto;
@@ -345,7 +346,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0;
-    padding: 0.3rem 2.8rem 0.35rem;
+    padding: 0.3rem 2.8rem calc(0.35rem + env(safe-area-inset-bottom, 0px));
     border: none;
     border-top: 1px solid var(--sidebar-filet);
     overflow: visible;
@@ -385,7 +386,7 @@ body {
   .site-sidebar .theme-toggle {
     position: absolute;
     right: 0.5rem;
-    bottom: 0.3rem;
+    bottom: calc(0.3rem + env(safe-area-inset-bottom, 0px));
     width: auto;
     margin: 0;
     padding: 0.45rem;
@@ -403,7 +404,7 @@ body {
   .site-footer { width: auto; margin: 0 0.75rem 0.9rem; }
 
   /* Retour en haut : maintenu au-dessus de la barre inférieure */
-  .back-to-top { bottom: 5rem; }
+  .back-to-top { bottom: calc(5rem + env(safe-area-inset-bottom, 0px)); }
 }
 
 /* Texte réservé aux lecteurs d'écran (structure accessible sans bruit visuel) */
@@ -1155,7 +1156,7 @@ figcaption {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
   h2 { font-size: 1.3rem; }
   h3 { font-size: 1.1rem; }
 }
@@ -1725,6 +1726,11 @@ body {
   color: var(--encre-douce);
 }
 .cartouche-val { padding: 0.55rem 0.85rem; font-size: 0.95rem; }
+/* Petits écrans : le cartouche passe en une seule colonne (clé au-dessus, valeur en dessous) */
+@media (max-width: 40rem) {
+  .cartouche-ligne { grid-template-columns: 1fr; }
+  .cartouche-cle { border-right: none; border-bottom: 1px solid var(--filet); }
+}
 
 /* — Fiche de caractéristiques (liste clé / valeur) — */
 .spec { list-style: none; margin: 1.25rem 0; padding: 0; border: 1px solid var(--filet); border-radius: var(--rayon-petit); overflow: hidden; }
