@@ -1732,6 +1732,11 @@ body {
 .spec li:last-child { border-bottom: none; }
 .spec-cle { padding: 0.5rem 0.8rem; border-right: 1px solid var(--filet); background: rgba(76, 180, 234, 0.05); font-family: var(--police-mono); font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--encre-douce); }
 .spec-val { padding: 0.5rem 0.8rem; font-size: 0.95rem; }
+/* Petits écrans : la fiche passe en une seule colonne (clé au-dessus, valeur en dessous) */
+@media (max-width: 40rem) {
+  .spec li { grid-template-columns: 1fr; }
+  .spec-cle { border-right: none; border-bottom: 1px solid var(--filet); }
+}
 
 /* — Étiquette technique — */
 .badge {
