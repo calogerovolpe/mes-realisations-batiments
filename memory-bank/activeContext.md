@@ -4,7 +4,7 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 15 octobre 2026 (parcours — chronologie corrigée et parcours restauration scindé ; CV et lettre de motivation téléchargeables, aperçu PDF sur la page parcours et boutons dans la barre latérale). Avant : visionneuse — zoom des images, contraste des boutons en thème clair/sombre et attestation AFPA redressée ; audit mobile first (cartouche accueil une colonne, zone sûre iOS, breakpoints) ; fiche .spec responsive ; navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage téléchargeable.
+État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 15 octobre 2026 (parcours — chronologie corrigée et parcours restauration scindé ; CV et lettre de motivation téléchargeables, aperçu PDF sur la page parcours et boutons dans la barre latérale ; compétences en tags visibles dans la frise et accordéon « Toutes les compétences acquises »). Avant : visionneuse — zoom des images, contraste des boutons en thème clair/sombre et attestation AFPA redressée ; audit mobile first (cartouche accueil une colonne, zone sûre iOS, breakpoints) ; fiche .spec responsive ; navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage téléchargeable.
 - Portfolio : 35 planches en 8 groupes — captures d'écran AutoCAD (A01-A09) ;
   relevé d'existant (A10-A12 réalisés par une entreprise externe + PH·01-PH·02
   réalisés personnellement pour le patrimoine bâti municipal, diffusés avec
@@ -144,6 +144,22 @@ Complément (15 octobre 2026) — parcours, CV et lettre de motivation
 - Footer « Dernière mise à jour » porté au 15 octobre 2026 sur les 12 pages.
 - Points ouverts inchangés : le CV PDF publié affiche encore l'ancienne adresse e-mail ;
   poids du JavaScript ≈ 34 Ko (> limite de 24 Ko de la règle 04).
+
+Complément (15 octobre 2026, suite) — tags de compétences
+- Dans parcours.html, les bulles de survol « Compétences acquises » (.chrono-bulle,
+  invisibles sans survol) sont remplacées par des tags visibles directement dans chaque
+  carte de la frise : plus exhaustifs et précis, sans doublon dans une même liste
+  (.tags > .tag). Chaque carte de la frise expose donc ses compétences en clair.
+- Nouvelle section repliable « Toutes les compétences acquises », placée sous
+  « Compétences techniques » : <details>/<summary> natif (sans JavaScript, replié par
+  défaut, utilisable au clavier), regroupant l'ensemble des compétences par thème —
+  CAO/DAO et dessin technique, conception 3D et aménagement, chiffrage et gestion,
+  restauration collective, fonction publique et transversal, culture artistique et
+  communication. Liste dédupliquée.
+- Styles .tags / .tag et .accordeon ajoutés dans assets/css/style.css ; les règles
+  .chrono-bulle (style.css et print.css) sont supprimées. À l'impression (print.css),
+  les tags restent lisibles en noir sur blanc (sans pastille) et l'accordéon est masqué,
+  le CV imprimé conservant la frise et la liste « Compétences techniques ».
 
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).

@@ -107,9 +107,9 @@ img { max-width: 100%; height: auto; page-break-inside: avoid; }
 .stat-libelle { color: #000000 !important; }
 
 /* Parcours — ligne de temps linéarisée en CV : une seule colonne, sans
-   ornement. Les bulles de compétences redeviennent du texte visible
-   (l'impression ne connaît pas le survol) ; les fenêtres de détail et la
-   légende sont masquées ; les mobilités restent lisibles. */
+   ornement. Les tags de compétences restent lisibles (sans fond ni bordure
+   colorée) ; les fenêtres de détail et la légende sont masquées ; les
+   mobilités restent lisibles. */
 .chrono-segment { padding: 0 !important; }
 .chrono-segment::before { display: none !important; }
 .chrono-point { margin: 0 0 0.6rem !important; }
@@ -118,7 +118,7 @@ img { max-width: 100%; height: auto; page-break-inside: avoid; }
 .chrono-titre,
 .chrono-desc,
 .chrono-note,
-.chrono-bulle { color: #000000 !important; }
+.tag { color: #000000 !important; }
 .chrono-action,
 .chrono-ico { display: none !important; }
 .chrono-carte,
@@ -142,19 +142,17 @@ img { max-width: 100%; height: auto; page-break-inside: avoid; }
   border-radius: 0 !important;
   font-weight: bold;
 }
-.chrono-bulle {
-  position: static !important;
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  margin: 0.15rem 0 0 !important;
-  padding: 0 !important;
-  border: none !important;
+/* Tags de compétences à l'impression : noir sur blanc, sans pastille colorée */
+.tags { gap: 0.25rem !important; margin: 0.15rem 0 0.3rem !important; }
+.tag {
+  padding: 0 0.4rem !important;
+  border-color: #666666 !important;
   background: none !important;
-  box-shadow: none !important;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
-.chrono-bulle::before { display: none !important; }
+/* Accordéon des compétences acquises : masqué à l'impression (le CV imprimé
+   conserve la frise et la liste « Compétences techniques »). */
+.accordeon { display: none !important; }
 .chrono-demenagement {
   background: none !important;
   border: none !important;

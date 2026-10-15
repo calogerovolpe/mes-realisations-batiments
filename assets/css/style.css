@@ -1505,42 +1505,65 @@ figcaption {
 }
 .chrono-demenagement-desc { margin: 0; font-size: 0.88rem; color: var(--encre-douce); line-height: 1.5; }
 
-/* Bulle de compétences (au survol et au focus clavier) */
-.chrono-bulle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(100% + 0.35rem);
-  z-index: 6;
-  margin: 0;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid var(--accent);
-  border-radius: var(--rayon-petit);
-  background: var(--papier);
-  box-shadow: var(--ombre-2);
-  font-size: 0.85rem;
-  line-height: 1.45;
-  color: var(--encre);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.15s ease;
+/* Tags de compétences : visibles directement dans les cartes de la frise et
+   dans l'accordéon « Toutes les compétences acquises ». */
+.tags {
+  list-style: none;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
-.chrono-carte:hover .chrono-bulle,
-.chrono-carte:focus-within .chrono-bulle { opacity: 1; visibility: visible; }
-.chrono-bulle::before {
-  content: "";
-  position: absolute;
-  top: -0.4rem;
-  left: 50%;
-  width: 0.7rem;
-  height: 0.7rem;
-  margin-left: -0.35rem;
-  transform: rotate(45deg);
-  background: var(--papier);
-  border-left: 1px solid var(--accent);
-  border-top: 1px solid var(--accent);
+.tag {
+  display: inline-block;
+  padding: 0.14rem 0.55rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: var(--accent-fond);
+  color: var(--encre-douce);
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
+
+/* Accordéon « Toutes les compétences acquises » : <details>/<summary> natif,
+   replié par défaut, utilisable au clavier, sans JavaScript. */
+.accordeon {
+  margin: 1.5rem 0 0;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--papier-2);
+  overflow: hidden;
+}
+.accordeon > summary {
+  position: relative;
+  padding: 0.7rem 2.4rem 0.7rem 0.95rem;
+  font-weight: 600;
+  color: var(--accent-fonce);
+  cursor: pointer;
+  list-style: none;
+}
+.accordeon > summary::-webkit-details-marker { display: none; }
+.accordeon > summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 0.95rem;
+  transform: translateY(-50%);
+  font-weight: 700;
+}
+.accordeon[open] > summary::after { content: "−"; }
+.accordeon > summary:hover { color: var(--accent); }
+.accordeon > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.accordeon-corps {
+  padding: 0.35rem 0.95rem 1rem;
+  border-top: 1px solid var(--filet);
+}
+.accordeon-corps h3 {
+  margin: 1rem 0 0.55rem;
+  font-size: 0.98rem;
+}
+.accordeon-corps .tags { margin-bottom: 0; }
 
 /* Fenêtres de détail (pop-up modale en CSS pur, ouverte via :target) */
 .chrono-modales { display: contents; }

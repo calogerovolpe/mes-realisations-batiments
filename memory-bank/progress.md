@@ -95,6 +95,17 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       quelle (ni adresse postale, ni téléphone). Règle 02 mise à jour (3 documents
       téléchargeables). Footer « Dernière mise à jour » porté au 15 octobre 2026.
 
+- [x] Tags de compétences (15 octobre 2026) : dans parcours.html, les bulles de survol
+      « Compétences acquises » (.chrono-bulle) sont remplacées par des tags visibles
+      directement dans chaque carte de la frise (plus exhaustifs et précis, sans doublon
+      dans une même liste) ; nouvelle section dépliable « Toutes les compétences
+      acquises » placée sous « Compétences techniques » (<details>/<summary> natif, sans
+      JavaScript), listant l'ensemble des compétences par thème (CAO/DAO et dessin
+      technique, conception 3D et aménagement, chiffrage et gestion, restauration
+      collective, fonction publique et transversal, culture artistique et communication).
+      Styles .tags / .tag et .accordeon ajoutés (style.css) ; règles .chrono-bulle
+      retirées ; à l'impression, tags noir sur blanc et accordéon masqué (print.css).
+
 - [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
       parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore
       l'ancienne adresse (texte vectoriel en police sous-ensemble) — le régénérer depuis
