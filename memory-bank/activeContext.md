@@ -4,7 +4,7 @@ Projet : « Volpe Calogero — Dessinateur projeteur CAO/DAO »
 Dépôt : calogerovolpe/mes-realisations-batiments — branche main, GitHub Pages (racine).
 URL : https://calogerovolpe.github.io/mes-realisations-batiments/
 
-État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 11 octobre 2026 (visionneuse — zoom des images, contraste des boutons en thème clair/sombre et attestation AFPA redressée). Avant : audit mobile first (cartouche accueil une colonne, zone sûre iOS, breakpoints) ; fiche .spec responsive ; navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage téléchargeable.
+État : version CAO/DAO close (3 jalons) ; compléments en cours. Dernier complément : 15 octobre 2026 (parcours — chronologie corrigée et parcours restauration scindé ; CV et lettre de motivation téléchargeables, aperçu PDF sur la page parcours et boutons dans la barre latérale). Avant : visionneuse — zoom des images, contraste des boutons en thème clair/sombre et attestation AFPA redressée ; audit mobile first (cartouche accueil une colonne, zone sûre iOS, breakpoints) ; fiche .spec responsive ; navigation de fin de page, pied de page structuré, groupe Revit, rapport de stage téléchargeable.
 - Portfolio : 35 planches en 8 groupes — captures d'écran AutoCAD (A01-A09) ;
   relevé d'existant (A10-A12 réalisés par une entreprise externe + PH·01-PH·02
   réalisés personnellement pour le patrimoine bâti municipal, diffusés avec
@@ -26,7 +26,7 @@ URL : https://calogerovolpe.github.io/mes-realisations-batiments/
   langues, centres d'intérêt, renvoi au portfolio. Le stage de deux mois chez un
   architecte indépendant est rattaché à la formation intensive d'un an à l'AFPA
   (fin de formation). Les mobilités personnelles (déménagements 2025 « Retour en
-  Belgique » et 2020 « Déménagement vers Paris ») sont réintégrées dans la frise
+  Belgique » et 2019 « Déménagement vers Paris ») sont réintégrées dans la frise
   (.chrono-demenagement + légende « Mobilité personnelle »). Section « Diplômes et
   certifications » : diplôme Bac pro et attestation de compétence AFPA (dessinateur
   projeteur), chacun affiché en pop-up (.visionneuse) — images assets/img/
@@ -119,13 +119,39 @@ Complément (11 octobre 2026) — visionneuse : zoom, contraste des boutons, att
 - Attestation de compétence AFPA (assets/img/attestation-competence-afpa.jpg) : redressée
   (rotation 180°) et ré-encodée sous 300 Ko.
 
+Complément (15 octobre 2026) — parcours, CV et lettre de motivation
+- Chronologie de parcours.html corrigée : Montreuil passe à 2022-2024 (durée inchangée :
+  « un an et demi en collectivité territoriale », conforme aux « dix-huit mois » de la
+  lettre de motivation) ; le parcours restauration est
+  scindé en « Bruxelles 2007-2019 » (synthèse en frise + parcours complet dans la fenêtre
+  « Voir le parcours complet » : de commis de cuisine à second de cuisine, intérim
+  multi-établissements, événements de 50 à 1000 convives, gestion du stress) et
+  « Val-de-Marne 2019-2020 » (contrat d'un an pour remplacer la cuisinière, 3 compétences
+  liées à la fonction publique), ce dernier placé APRÈS le déménagement vers Paris, resitué
+  en 2019 : la contradiction « Val-de-Marne avant l'arrivée en France » est levée.
+- Barre d'outils de parcours.html (print.js) : « Imprimer cette page » conservé ;
+  « Télécharger en PDF » remplacé par deux liens de téléchargement (CV et lettre).
+- Rubrique « CV et lettre de motivation » (parcours.html) : téléchargement direct + lecture
+  de la lettre dans un aperçu PDF (.visionneuse-doc-fixe, iframe + bouton de téléchargement).
+- Barre latérale (toutes pages) : deux boutons « Voir mon CV » et « Lettre de motivation »
+  injectés par assets/js/documents.js (chargé via main.js), avec un aperçu PDF partagé
+  (.apercu-doc) et téléchargement direct du fichier original. Masqués sur mobile (≤ 60 rem)
+  pour préserver la barre inférieure à 5 icônes ; l'aperçu de la lettre est exclu de la
+  visionneuse de planches (.visionneuse-doc-fixe) — son défilement reste natif.
+- Nouveau fichier publié : assets/fichiers/lettre-motivation.pdf (copie de la lettre du
+  propriétaire — ni adresse postale, ni numéro de téléphone). Règle 02 mise à jour :
+  3 documents téléchargeables autorisés.
+- Footer « Dernière mise à jour » porté au 15 octobre 2026 sur les 12 pages.
+- Points ouverts inchangés : le CV PDF publié affiche encore l'ancienne adresse e-mail ;
+  poids du JavaScript ≈ 34 Ko (> limite de 24 Ko de la règle 04).
+
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
 - L'architecte du stage n'est jamais nommé : écrire « architecte indépendant ».
 - Un seul e-mail : contact@calogero-volpe.eu. Aucun numéro de téléphone, aucune adresse.
 - « Guignies, zone frontalière Lille » (pas de code postal).
 - Montreuil : décrit en texte ; seuls PH·01 et PH·02 (relevés diffusés avec autorisation) sont publiés, aucun autre visuel.
-- Deux documents téléchargeables autorisés par le propriétaire : le CV et le rapport de stage expurgé (voir progress.md).
+- Trois documents téléchargeables autorisés par le propriétaire : le CV, le rapport de stage expurgé et la lettre de motivation (publiée telle quelle — ni adresse, ni téléphone) ; voir progress.md.
 
 Points ouverts
 - contact.html : le formulaire pointe vers Formspree ; l'identifiant (f/…) reste à

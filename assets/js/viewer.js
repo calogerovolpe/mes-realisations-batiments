@@ -7,7 +7,12 @@
   'use strict';
 
   function liste() {
-    return Array.prototype.slice.call(document.querySelectorAll('.visionneuse'));
+    /* Les aperçus de documents (CV, lettre) portent la classe .visionneuse-doc-fixe :
+       ce ne sont pas des planches — ils gardent leur défilement natif et ne
+       reçoivent ni les commandes, ni le zoom, ni la navigation de la visionneuse. */
+    return Array.prototype.slice.call(
+      document.querySelectorAll('.visionneuse:not(.visionneuse-doc-fixe)')
+    );
   }
   function actif(vues) {
     for (var i = 0; i < vues.length; i++) {
@@ -54,7 +59,20 @@
   }
   function fermer() { window.location.hash = 'dessins-autocad'; }
 
+  /* Aperçus de documents (CV, lettre) : la touche Échap reproduit la croix de
+     fermeture (même cible que le lien « Fermer l'aperçu » du HTML). */
+  function fermetureClavierDocs() {
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') { return; }
+      var doc = document.querySelector('.visionneuse-doc-fixe:target');
+      if (!doc) { return; }
+      var lien = doc.querySelector('.visionneuse-fermer');
+      if (lien) { window.location.hash = lien.getAttribute('href'); }
+    });
+  }
+
   function construire() {
+    fermetureClavierDocs();
     var vues = liste();
     if (!vues.length) { return; }
 

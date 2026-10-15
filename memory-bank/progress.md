@@ -75,6 +75,26 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       illisibles en thème clair sur le fond sombre de l'aperçu ; attestation de compétence
       AFPA redressée (rotation 180°) et ré-encodée sous 300 Ko.
 
+- [x] Complément parcours & documents (15 octobre 2026) : chronologie corrigée —
+      Montreuil passe à 2022-2024 ; le parcours restauration est scindé en
+      « Bruxelles 2007-2019 » (synthèse en frise : de commis de cuisine à second de
+      cuisine, intérim multi-établissements, événements de 50 à 1000 convives,
+      gestion du stress ; parcours complet dans la fenêtre « Voir le parcours
+      complet ») et « Val-de-Marne 2019-2020 » (contrat d'un an pour remplacer la
+      cuisinière, 3 compétences liées à la fonction publique) placé APRÈS le
+      déménagement vers Paris, resitué en 2019 — la contradiction « Val-de-Marne
+      avant le déménagement en France » est levée. Barre d'outils de parcours.html :
+      « Imprimer cette page » conservé ; « Télécharger en PDF » remplacé par les
+      liens de téléchargement du CV et de la lettre de motivation. Nouvelle rubrique
+      « CV et lettre de motivation » avec lecture de la lettre en aperçu PDF (iframe)
+      et téléchargement. Deux boutons « Voir mon CV » et « Lettre de motivation »
+      ajoutés à la barre latérale sur toutes les pages (assets/js/documents.js,
+      injecté via main.js), avec un aperçu PDF partagé et téléchargement direct du
+      fichier original ; l'aperçu de la lettre (parcours.html) est exclu de la
+      visionneuse de planches (classe .visionneuse-doc-fixe). Lettre publiée telle
+      quelle (ni adresse postale, ni téléphone). Règle 02 mise à jour (3 documents
+      téléchargeables). Footer « Dernière mise à jour » porté au 15 octobre 2026.
+
 - [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
       parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore
       l'ancienne adresse (texte vectoriel en police sous-ensemble) — le régénérer depuis

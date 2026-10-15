@@ -10,6 +10,7 @@
   var modules = [
     'assets/js/print.js',
     'assets/js/nav.js',
+    'assets/js/documents.js',
     'assets/js/search.js',
     'assets/js/sommaire.js',
     'assets/js/viewer.js',
