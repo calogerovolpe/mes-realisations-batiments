@@ -106,6 +106,13 @@ Version CAO/DAO — 3 jalons, un jalon = une conversation = un commit.
       Styles .tags / .tag et .accordeon ajoutés (style.css) ; règles .chrono-bulle
       retirées ; à l'impression, tags noir sur blanc et accordéon masqué (print.css).
 
+- [x] Position du bloc Val-de-Marne dans la frise (15 octobre 2026) : dans parcours.html,
+      le bloc « Cuisinier en collectivité territoriale — Val-de-Marne (2019-2020) » est
+      replacé dans le segment parisien, juste après la formation AFPA Paris 12 (2021-2022)
+      et donc au-dessus du bandeau « Déménagement vers Paris » (2019). La frise se lit du
+      plus récent au plus ancien : la chronologie réelle est désormais respectée
+      (déménagement 2019 → Val-de-Marne 2019-2020 → AFPA 2021-2022 → Montreuil 2022-2024).
+
 - [ ] Adresse e-mail de contact mise à jour → contact@calogero-volpe.eu (contact.html,
       parcours.html, memory-bank). Reste à faire : le CV PDF publié affiche encore
       l'ancienne adresse (texte vectoriel en police sous-ensemble) — le régénérer depuis

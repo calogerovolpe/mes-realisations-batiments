@@ -161,6 +161,14 @@ Complément (15 octobre 2026, suite) — tags de compétences
   les tags restent lisibles en noir sur blanc (sans pastille) et l'accordéon est masqué,
   le CV imprimé conservant la frise et la liste « Compétences techniques ».
 
+Complément (15 octobre 2026) — position du bloc Val-de-Marne dans la frise
+- parcours.html : le bloc « Cuisinier en collectivité territoriale — Val-de-Marne
+  (2019-2020) » est replacé dans le segment parisien, immédiatement après la formation
+  AFPA Paris 12 (2021-2022), donc AU-DESSUS du bandeau « Déménagement vers Paris » (2019).
+  La frise se lit du plus récent au plus ancien : la chronologie réelle est désormais
+  respectée — déménagement vers Paris (2019) → Val-de-Marne (2019-2020) → AFPA
+  (2021-2022) → Montreuil (2022-2024).
+
 Décisions verrouillées
 - Nom « Volpe Calogero » autorisé partout (ordre fixé).
 - L'architecte du stage n'est jamais nommé : écrire « architecte indépendant ».
